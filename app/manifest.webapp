@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Web Starter Kit",
+  "name": "Client-side Web API's",
   "launch_path": "/index.html",
   "description": "A front-end template that helps you build fast, modern mobile web apps.",
   "icons": {
@@ -18,7 +18,7 @@
   },
   "locales": {
     "en": {
-      "name": "Web Starter Kit",
+      "name": "Client-side Web API's",
       "description": "A front-end template that helps you build fast, modern mobile web apps."
     }
   }

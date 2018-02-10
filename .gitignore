@@ -3,7 +3,7 @@ dist/
 .tmp
 app.yaml
 .idea/*
-*.iml
+*.imlgit st
 Gemfile.lock
 node_modules
 .DS_Store
