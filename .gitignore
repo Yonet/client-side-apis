@@ -1,0 +1,11 @@
+node_modules
+dist/
+.tmp
+app.yaml
+.idea/*
+*.iml
+Gemfile.lock
+node_modules
+.DS_Store
+*.pyc
+.vscode/
