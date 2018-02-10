@@ -220,6 +220,12 @@ gulp.task('copy-sw-scripts', () => {
     .pipe(gulp.dest('dist/scripts/sw'));
 });
 
+//gh-pages
+gulp.task('deploy', ['default'], () => {
+  return gulp.src('dist/**/*')
+    .pipe($.ghPages());
+});
+
 // See http://www.html5rocks.com/en/tutorials/service-worker/introduction/ for
 // an in-depth explanation of what service workers are and why you should care.
 // Generate a service worker file that will provide offline functionality for
