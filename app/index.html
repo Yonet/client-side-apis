@@ -190,21 +190,28 @@
       </div>
       <!-- /Home -->
       <!-- Communication -->
-      <div class="mdl-grid demo-content" id="communication">
+      <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="communication">
 
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <div class="mdl-card__supporting-text">
-              <h4>Communication APIs</h4>
-              <p>Someting</p>
+          <div class="mdl-card__supporting-text">
+            <h4>Communication APIs</h4>
+            <div class="mdl-tabs__tab-bar">
+              <a class="mdl-tabs__tab is-active" href="#network">Network</a>
+              <a class="mdl-tabs__tab" href="#bluetooth">Bluetooth</a>
+              <a class="mdl-tabs__tab" href="#push">Push</a>
             </div>
+          </div>
         </div>
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-          <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-          </svg>
-          <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-          </svg>
+        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
+          <section class="mdl-tabs__panel  is-active" id="network">
+            <div class="page-content">Network</div>
+          </section>
+          <section class="mdl-tabs__panel " id="bluetooth">
+            <div class="page-content">Bluetooth</div>
+          </section>
+          <section class="mdl-tabs__panel " id="push">
+            <div class="page-content">Push</div>
+          </section>
         </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
@@ -256,19 +263,33 @@
       </div>
       <!-- /Communication -->
       <!-- Hardware-->
-      <div class="mdl-grid demo-content" id="hardware">
+      <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="hardware">
 
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid mdl-card__supporting-text">
           <div class="mdl-card__supporting-text">
             <h4>Hardware APIs</h4>
-            <p>
-              Something something
-            </p>
+            <div class="mdl-tabs__tab-bar">
+                <a class="mdl-tabs__tab is-active" href="#proximity">Device Proximity</a>
+                <a class="mdl-tabs__tab" href="#orientation">Device Orientation</a>
+                <a class="mdl-tabs__tab" href="#geolocation">Geolocation</a>
+                <a class="mdl-tabs__tab" href="#camera">Camera</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-
-        </div>
+          <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
+            <section class="mdl-tabs__panel  is-active" id="proximity">
+              <div class="page-content">proximity</div>
+            </section>
+            <section class="mdl-tabs__panel " id="orientation">
+              <div class="page-content">orientation</div>
+            </section>
+            <section class="mdl-tabs__panel " id="geolocation">
+              <div class="page-content">geolocation</div>
+            </section>
+            <section class="mdl-tabs__panel " id="camera">
+                <div class="page-content">camera</div>
+              </section>
+          </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
             <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
@@ -320,7 +341,7 @@
       </div>
       <!-- /Hardware -->
       <!-- Storage -->
-      <div class="mdl-grid demo-content" id="storage">
+      <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="storage">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
           <div class="mdl-card__supporting-text">
             <h4>Storage APIs</h4>
@@ -330,17 +351,29 @@
               for offline use, retain user-specific settings for your site, and more. This article explains the very basics
               of how these work.
             </p>
+
+            <div class="mdl-tabs__tab-bar">
+                <a class="mdl-tabs__tab is-active" href="#session">Session Storage</a>
+                <a class="mdl-tabs__tab" href="#local">Local Storage</a>
+                <a class="mdl-tabs__tab" href="#indexdb">IndexDB</a>
+                <a class="mdl-tabs__tab" href="#exercise3">Exercise</a>
+              </div>
+            </div>
           </div>
-          
-        </div>
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-          <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-          </svg>
-          <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-          </svg>
-        </div>
+          <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
+            <section class="mdl-tabs__panel  is-active" id="session">
+              <div class="page-content">session</div>
+            </section>
+            <section class="mdl-tabs__panel " id="local">
+              <div class="page-content">local</div>
+            </section>
+            <section class="mdl-tabs__panel " id="indexdb">
+              <div class="page-content">indexdb</div>
+            </section>
+            <section class="mdl-tabs__panel " id="exercise3">
+                <div class="page-content">exercise</div>
+              </section>
+          </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
             <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
