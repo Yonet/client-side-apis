@@ -1,1 +1,3 @@
-navigator.vibrate(500);
+if('vibrate' in navigator){
+    navigator.vibrate(500);
+}
