@@ -39,6 +39,8 @@
 		<div class="slides">
 			<section>
 				<h1>Client-side Web APIs</h1>
+				<p>Repo: https://github.com/Yonet/client-side-apis</p>
+				<p>npm i -g gulp</p>
 				<p>
 					<small>Created by
 						<a href="https://twitter.com/AysSomething">Aysegul Yonet</a>
@@ -118,9 +120,9 @@ navigator.connection.addEventListener('change', changeHandler);
 				<img src="images/screen.png" alt="screen-object">
 				
 			</section>
-			<section>
+			<!-- <section>
 				<h4>Device Proximity</h4>
-			</section>
+			</section> -->
 			<section>
 				<h4>Geolocation</h4>
 			</section>
@@ -132,14 +134,44 @@ navigator.connection.addEventListener('change', changeHandler);
 			</section>
 			<section>
 				<h4>Session Storage</h4>
+				<ul>
+					<li></li>
+				</ul>
 			</section>
 			<section>
 				<h4>Local Storage</h4>
+				<ul>
+					<li>Limited to ~10 MB per origin</li>
+					<li>Cleared upon exiting on Incognito mode</li>
+				</ul>
 			</section>
 			<section>
 				<h4>IndexedDB</h4>
+				<ul>
+					<li>Good for large amounts of structured data that requires high performance retrieval
+						</li>
+					<li>Operations as done asynchronously as opposed to the synchronous Storage API.
+						</li>
+					<li>Storage limit is browser and client dependent. </li>
+						<li>You can create indexes based on multiple properties of objects resulting in fast query times.
+							</li>
+							<li>Intended to power offline webapps.
+								</li>
+				</ul>
 			</section>
+			<section>
+					<h4>IndexedDB</h4>
+					<ul>
+						<li>dexie.js: A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 
+							</li>
+						<li>ZangoDB: A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
+
+							</li>
+						<li>JsStore: An IndexedDB wrapper with SQL like syntax.
+							</li>
+					</ul>
+				</section>
 			<!-- <section>
 						<h2>Marvelous List</h2>
 						<ul>
