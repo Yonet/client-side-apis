@@ -208,6 +208,7 @@
               <a class="mdl-tabs__tab" href="#bluetooth">Bluetooth</a>
               <a class="mdl-tabs__tab" href="#push">Push</a>
             </div>
+
           </div>
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
@@ -222,7 +223,7 @@
           </section>
           <section class="mdl-tabs__panel " id="push">
             <div class="page-content">
-              <input type="text" value="You have a notification">
+              <input type="text" value="You have a notification" id="push-input">
               <button id="push-btn" class="mdl-button">Notify</button>
             </div>
           </section>
@@ -525,6 +526,9 @@
   <script src="scripts/storage/local.js"></script>
   <script src="scripts/storage/session.js"></script>
   <script src="scripts/storage/indexeddb.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCthgKSA_oQ3Ken11zH91tKhTASnha4pSk&callback=initMap">
+  </script>
 </body>
 
 </html>

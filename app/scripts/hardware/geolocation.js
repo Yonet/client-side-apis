@@ -8,6 +8,7 @@ function log(message) {
 navigator.geolocation.watchPosition(logPosition);
 
 function logPosition(position) {
+    console.log("position", position);
     if(!position) {
         navigator.geolocation.getCurrentPosition((position)=> log('latitude: ' + position.coords.latitude +
         ', longitude: ' + position.coords.longitude))
@@ -31,3 +32,5 @@ navigator.permissions.query({name:'notifications'}).then(function(p) {
         console.log('p changes ', p);
     }
 })
+
+// To add the google maps go to: https://developers.google.com/maps/documentation/javascript/adding-a-google-map
