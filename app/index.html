@@ -102,16 +102,6 @@
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>Hardware</a>
         <a class="mdl-navigation__link" href="#storage">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Storage</a>
-        <a class="mdl-navigation__link" href="">
-          <!-- <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-        <a class="mdl-navigation__link" href="">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
-        <a class="mdl-navigation__link" href="">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a> -->
-          <!-- <a class="mdl-navigation__link" href="">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
-        <a class="mdl-navigation__link" href="">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a> -->
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>
@@ -133,12 +123,29 @@
           </div>
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-          <!-- <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-          </svg>
-          <svg fill="currentColor" viewBox="0 0 500 250" class="demo-graph">
-            <use xlink:href="#chart" />
-          </svg> -->
+          <ul>
+            <li><a href="#communication">Communication</a>
+              <ul>
+                <li>Network Information</li>
+                <li>Bluetooth</li>
+                <li>Push API</li>
+              </ul>
+            </li>
+            <li><a href="#hardware">Hardware</a>
+              <ul>
+                <li>O</li>
+                <li>Bluetooth</li>
+                <li>Push API</li>
+              </ul>
+            </li>
+            <li><a href="#hardware">Data Management APIs</a>
+              <ul>
+                <li>Session Storage</li>
+                <li>Local Storge</li>
+                <li>IndexedDB API</li>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
@@ -355,7 +362,7 @@
             <div class="mdl-tabs__tab-bar">
                 <a class="mdl-tabs__tab is-active" href="#session">Session Storage</a>
                 <a class="mdl-tabs__tab" href="#local">Local Storage</a>
-                <a class="mdl-tabs__tab" href="#indexdb">IndexDB</a>
+                <a class="mdl-tabs__tab" href="#indexeddb">IndexedDB</a>
                 <a class="mdl-tabs__tab" href="#exercise3">Exercise</a>
               </div>
             </div>
@@ -367,8 +374,8 @@
             <section class="mdl-tabs__panel " id="local">
               <div class="page-content">local</div>
             </section>
-            <section class="mdl-tabs__panel " id="indexdb">
-              <div class="page-content">indexdb</div>
+            <section class="mdl-tabs__panel " id="indexeddb">
+              <div class="page-content">IndexedDB</div>
             </section>
             <section class="mdl-tabs__panel " id="exercise3">
                 <div class="page-content">exercise</div>
@@ -440,7 +447,7 @@
   <script src="scripts/hardware/orientation.js"></script>
   <script src="scripts/storage/local.js"></script>
   <script src="scripts/storage/session.js"></script>
-  <script src="scripts/storage/indexdb.js"></script>
+  <script src="scripts/storage/indexeddb.js"></script>
 </body>
 
 </html>
