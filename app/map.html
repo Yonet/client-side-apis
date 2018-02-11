@@ -20,7 +20,7 @@
       function getCurrentPosition(position) {
         var uluru = {lat: position.coords.latitude, lng:  position.coords.longitude};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 10,
           center: uluru
         });
         var marker = new google.maps.Marker({
