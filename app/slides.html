@@ -46,13 +46,7 @@
 				</p>
 			</section>
 
-			<section>
-				<h4>Network Information</h4>
-
-				<pre><code class="hljs" data-trim contenteditable>
-navigator.connection.addEventListener('change', changeHandler);		
-			</code></pre>
-			</section>
+			
 			<section>
 				<h4>Network Information</h4>
 				<pre><code class="hljs" data-trim contenteditable>
@@ -81,7 +75,29 @@ enum EffectiveConnectionType {
 	"slow-2g"
 };
 </code></pre>
+			
+			</section>
+			<section>
+				<h4>Network Information</h4>
+<pre><code class="hljs" data-trim contenteditable>
+interface NetworkInformation : EventTarget {
+	readonly attribute ConnectionType          type;
+	readonly attribute EffectiveConnectionType effectiveType;
+	readonly attribute Megabit                 downlinkMax;
+	readonly attribute Megabit                 downlink;
+	readonly attribute Millisecond             rtt;
+	readonly attribute boolean                 saveData;
+				attribute EventHandler            onchange;
+};
+</code></pre>
 
+			</section>
+			<section>
+				<h4>Network Information</h4>
+	
+<pre><code class="hljs" data-trim contenteditable>
+navigator.connection.addEventListener('change', changeHandler);		
+</code></pre>
 			</section>
 			<section>
 				<h4>Bluetooth</h4>
