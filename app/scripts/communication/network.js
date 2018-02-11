@@ -1,7 +1,20 @@
-console.log('Network here');
-navigator.connection.addEventListener('change', logNetworkInfo);
+let type;
+let max;
+let message;
+let messageDiv = document.querySelector('#network-message');
+var paragraphEl = document.createElement('p');
 
-function logNetworkInfo() {
+navigator.connection.addEventListener('change', changeHandler);
+
+function changeHandler() {
+  // Get the connection type.
+  type = navigator.connection.type;
+  max = navigator.connection.downlinkMax;
+
+  message = "Your network's max speed is " + max;
+  paragraphEl.textContent = message;
+  messageDiv.appendChild(paragraphEl);
+
   // Network type that browser uses
   console.log('         type: ' + navigator.connection.type);
 
@@ -23,4 +36,4 @@ function logNetworkInfo() {
   console.log('     saveData: ' + navigator.connection.saveData);
 }
 
-logNetworkInfo();
+changeHandler();

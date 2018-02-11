@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Client-side Web APIs slides</title>
+
+	<meta name="description" content="Client-side web APIs workshop slides">
+	<meta name="author" content="Aysegul Yonet">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="styles/slides/reveal.css">
+	<link rel="stylesheet" href="styles/slides/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="scripts/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'styles/slides/print/pdf.css' : 'styles/slides/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="scripts/lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Client-side Web APIs</h1>
+				<p>
+					<small>Created by
+						<a href="https://twitter.com/AysSomething">Aysegul Yonet</a>
+					</small>
+				</p>
+			</section>
+			<section>
+				<h2>Pretty Code</h2>
+				<pre><code class="hljs" data-trim contenteditable>
+			function linkify( selector ) {
+			  if( supports3DTransforms ) {
+			
+				var nodes = document.querySelectorAll( selector );
+			
+				for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+				  var node = nodes[i];
+			
+				  if( !node.className ) {
+					node.className += ' roll';
+				  }
+				}
+			  }
+			}
+								</code></pre>
+				
+			</section>
+			<section>Slide 1</section>
+			<section>Slide 2</section>
+			<!-- <section>
+						<h2>Marvelous List</h2>
+						<ul>
+							<li>No order here</li>
+							<li>Or here</li>
+							<li>Or here</li>
+							<li>Or here</li>
+						</ul>
+					</section> -->
+
+			<section style="text-align: left;">
+				<h1>THE END</h1>
+				<p>
+					-
+					<a href="https://twitter.com/AysSomething">@AysSomething</a>
+					<br> -
+					<a href="https://github.com/Yonet/client-side-apis">Demo source code</a>
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="scripts/lib/js/head.min.js"></script>
+	<script src="scripts/js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'scripts/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'scripts/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'scripts/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'scripts/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'scripts/plugin/search/search.js', async: true },
+				{ src: 'scripts/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'scripts/plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
