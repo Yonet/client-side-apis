@@ -1,8 +1,7 @@
-
-navigator.bluetooth.requestDevice({
-    acceptAllDevices: true
-    // filters: [{ services: [0xffe5] }]
-  })
+let options = {
+    "acceptAllDevices": true
+};
+navigator.bluetooth.requestDevice(options)
     .then(function(device) {
       // Step 2: Connect to it
       console.log('Connecting to device ', device)
