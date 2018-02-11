@@ -5,7 +5,8 @@ app.yaml
 .idea/*
 *.imlgit st
 Gemfile.lock
-node_modules
 .DS_Store
 *.pyc
 .vscode/
+.publish
+config.js
