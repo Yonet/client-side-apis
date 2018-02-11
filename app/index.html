@@ -221,7 +221,10 @@
             <div class="page-content">Bluetooth</div>
           </section>
           <section class="mdl-tabs__panel " id="push">
-            <div class="page-content">Push</div>
+            <div class="page-content">
+              <input type="text" value="You have a notification">
+              <button id="push-btn" class="mdl-button">Notify</button>
+            </div>
           </section>
         </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
@@ -292,13 +295,35 @@
               <div class="page-content">proximity</div>
             </section>
             <section class="mdl-tabs__panel " id="orientation">
-              <div class="page-content">orientation</div>
+              <div class="page-content">
+                Change Device Orientation.
+                <p id="orientation"></p>
+              </div>
             </section>
             <section class="mdl-tabs__panel " id="geolocation">
-              <div class="page-content">geolocation</div>
+              <div class="page-content">
+                <button id="geo-button"class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">Get my location</button>
+                <p id="geo-data"></p>
+              </div>
             </section>
             <section class="mdl-tabs__panel " id="camera">
-                <div class="page-content">camera</div>
+                <div class="page-content">camera
+                    <div id='results'>
+                        <div>
+                          <video autoplay></video>
+                          <button id='getUserMediaButton' class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">Get User Media</button>
+                        </div>
+                        <div>
+                          <canvas id='grabFrameCanvas'></canvas>
+                          <button id='grabFrameButton'  class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp" disabled>Grab Frame</button>
+                        </div>
+                        <div>
+                          <canvas id='takePhotoCanvas'></canvas>
+                          <button id='takePhotoButton'  class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp" disabled>Take Photo</button>
+                        </div>
+                      </div>
+              
+                </div>
               </section>
           </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
@@ -376,7 +401,31 @@
               <div class="page-content">session</div>
             </section>
             <section class="mdl-tabs__panel " id="local">
-              <div class="page-content">local</div>
+              <div class="page-content">
+                  <fieldset>
+                      <legend>Store</legend>
+                      <div>
+                        <label for="storeKey">Key: </label><input id="storeKey" type="text" value = "foo" />
+                      </div>
+                      <div>
+                        <label for="storeValue">Value: </label><input id="storeValue" type="text" value = "bar" />
+                      </div>
+                      <button id="storeButton" class="mdl-button">Store</button>
+                    </fieldset>
+                  
+                    <fieldset>
+                      <legend>Retrieve</legend>
+                        <div>
+                          <label for="retrieveKey">Key: </label><input id="retrieveKey" type="text" value = "foo" />
+                        </div>
+                        <div>
+                          <label for="retrieveValue">Value: </label><input id="retrieveValue" type="text" />
+                        </div>
+                        <button id="retrieveButton" class="mdl-button">Retrieve</button>
+                    </fieldset>
+                
+                <p id="retrieveValue"></p>
+              </div>
             </section>
             <section class="mdl-tabs__panel " id="indexeddb">
               <div class="page-content">IndexedDB
@@ -385,7 +434,8 @@
                   <i class="material-icons" role="presentation">add</i>
                   <span class="visuallyhidden">Add</span>
                 </button>
-                <button id="display-indexed" class="lass="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">Display</button>
+                <button id="display-indexed" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">Display</button>
+                <ul id="timestamps"></ul>
               </div>
             </section>
             <section class="mdl-tabs__panel " id="exercise3">
@@ -469,6 +519,7 @@
   <!-- <script src="scripts/communication/bluetooth.js"></script> -->
   <script src="scripts/hardware/geolocation.js"></script>
   <!-- <script src="scripts/hardware/vibrations.js"></script> -->
+  <script src="scripts/hardware/camera.js"></script>
   <script src="scripts/hardware/proximity.js"></script>
   <script src="scripts/hardware/orientation.js"></script>
   <script src="scripts/storage/local.js"></script>

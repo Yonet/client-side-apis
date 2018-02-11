@@ -1,6 +1,6 @@
-console.log('indexdv');
-let addButton = document.querySelector('#add-indexed');
-let displayButton = document.querySelector('#display-indexed');
+let timestampsLi = document.getElementById('timestamps');
+let addButton = document.getElementById('add-indexed');
+let displayButton = document.getElementById('display-indexed');
 
 displayButton.addEventListener('click', displayIndexedData);
 addButton.addEventListener('click', addToIndexed);
@@ -42,7 +42,13 @@ function displayIndexedData(e) {
     if ('getAll' in objectStore) {
         // IDBObjectStore.getAll() will return the full set of items in our store.
         objectStore.getAll().onsuccess = function (event) {
-            console.log('event.target.result', event.target.result);
+            let ts = event.target.result;
+            console.log('event.target.result', ts);
+            for(let i = 0; i < ts.length; i++){
+                let li = document.createElement('li');
+                li.textContent = ts[i];
+                timestampsLi.appendChild(li);
+            }
         };
     } else {
         // Fallback to the traditional cursor approach if getAll isn't supported.
