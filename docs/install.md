@@ -47,6 +47,15 @@ $ npm install
 Note: if you have the [Yarn](https://yarnpkg.com/) package manager installed, you can just run `yarn`.
 Web Starter Kit includes a yarn.lock file that will be used here.
 
+### Chrome Flags
+
+Some of the API calls in the WSK are experimental, so to use them you'll probably want to enable some flags in Google Chrome. These can be done by visiting `chrome://flags` in your browser. We suggest enabling the following flags.
+
+- Expirimental Extension APIs
+- Experimental JavaScript
+- Experimental Web Platform Features
+- Developer Tools experiments
+
 That's it! You should now have everything needed to use the Web Starter Kit.
 
 -
