@@ -222,7 +222,7 @@
           </section>
           <section class="mdl-tabs__panel " id="push">
             <div class="page-content">
-              <input type="text" value="You have a notification">
+              <input type="text" value="You have a notification" id="push-input">
               <button id="push-btn" class="mdl-button">Notify</button>
             </div>
           </section>
@@ -283,7 +283,7 @@
           <div class="mdl-card__supporting-text">
             <h4>Hardware APIs</h4>
             <div class="mdl-tabs__tab-bar">
-            
+
                 <a class="mdl-tabs__tab" href="#orientation">Device Orientation</a>
                 <a class="mdl-tabs__tab" href="#geolocation">Geolocation</a>
                 <a class="mdl-tabs__tab" href="#camera">Camera</a>
@@ -322,7 +322,7 @@
                           <button id='takePhotoButton'  class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp" disabled>Take Photo</button>
                         </div>
                       </div>
-              
+
                 </div>
               </section>
           </div>
@@ -412,7 +412,7 @@
                       </div>
                       <button id="storeButton" class="mdl-button">Store</button>
                     </fieldset>
-                  
+
                     <fieldset>
                       <legend>Retrieve</legend>
                         <div>
@@ -423,7 +423,7 @@
                         </div>
                         <button id="retrieveButton" class="mdl-button">Retrieve</button>
                     </fieldset>
-                
+
                 <p id="retrieveValue"></p>
               </div>
             </section>
@@ -497,7 +497,7 @@
   </div>
 
   <a href="https://github.com/Yonet/client-side-apis" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a>
-  
+
   <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
@@ -517,7 +517,6 @@
   <script src="scripts/communication/push.js"></script>
   <script src="scripts/communication/network.js"></script>
   <!-- <script src="scripts/communication/bluetooth.js"></script> -->
-  <script src="scripts/hardware/geolocation.js"></script>
   <!-- <script src="scripts/hardware/vibrations.js"></script> -->
   <script src="scripts/hardware/camera.js"></script>
   <!-- <script src="scripts/hardware/proximity.js"></script> -->
@@ -525,6 +524,11 @@
   <script src="scripts/storage/local.js"></script>
   <script src="scripts/storage/session.js"></script>
   <script src="scripts/storage/indexeddb.js"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzeIkw_Y-VvZmBY13PxsfYiW-R0jONaVA">
+    </script>
+
+  <script defer src="scripts/hardware/geolocation.js"></script>
 </body>
 
 </html>

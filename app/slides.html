@@ -105,7 +105,7 @@ interface NetworkInformation : EventTarget {
 				attribute EventHandler            onchange;
 };
 </code></pre>
-
+<p>The "saveData" attribute, when getting, returns true if the user has requested a reduced data usage mode from the user agent, and false otherwise.</p>
 			</section>
 			<section>
 				<h4>Network Information</h4>
@@ -148,14 +148,29 @@ navigator.connection.addEventListener('change', changeHandler);
 			<section>
 				<h4>Session Storage</h4>
 				<ul>
-					<li></li>
+					<li>Cleared when the user session is over</li>
 				</ul>
+<pre><code class="hljs" data-trim contenteditable>
+// Save data to sessionStorage
+sessionStorage.setItem('key', 'value');
+
+// Get saved data from sessionStorage
+var data = sessionStorage.getItem('key');
+
+// Remove saved data from sessionStorage
+sessionStorage.removeItem('key');
+
+// Remove all saved data from sessionStorage
+sessionStorage.clear();
+</code></pre>
 			</section>
 			<section>
 				<h4>Local Storage</h4>
 				<ul>
 					<li>Limited to ~10 MB per origin</li>
 					<li>Cleared upon exiting on Incognito mode</li>
+					<li>Since localStorage and sessionStorage are instances, they do not support prototyping. However, Storage API supports prototyping.
+						</li>
 				</ul>
 			</section>
 			<section>
