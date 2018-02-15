@@ -48,7 +48,20 @@
 				</p>
 			</section>
 
-			
+      <section>
+        <h4>Experimental Chrome Flags</h4>
+        <p>
+          <small>Enable following experimental flags on chrome browser.</small>
+        </p>
+        <ul>
+          <small>
+            <li>Experimental JavaScript</li>
+            <li>Experimental Web Platform features</li>
+            <li>Developer Tools experiments</li>
+          </small>
+        </ul>
+      </section>
+
 			<section>
 				<h4>Network Information</h4>
 				<pre><code class="hljs" data-trim contenteditable>
@@ -77,7 +90,7 @@ enum EffectiveConnectionType {
 	"slow-2g"
 };
 </code></pre>
-			
+
 			</section>
 			<section>
 				<h4>Network Information</h4>
@@ -96,9 +109,9 @@ interface NetworkInformation : EventTarget {
 			</section>
 			<section>
 				<h4>Network Information</h4>
-	
+
 <pre><code class="hljs" data-trim contenteditable>
-navigator.connection.addEventListener('change', changeHandler);		
+navigator.connection.addEventListener('change', changeHandler);
 </code></pre>
 		<a href="http://wicg.github.io/netinfo/">More info</a>
 			</section>
@@ -118,7 +131,7 @@ navigator.connection.addEventListener('change', changeHandler);
 			<section>
 				<h4>Device Orientation</h4>
 				<img src="images/screen.png" alt="screen-object">
-				
+
 			</section>
 			<!-- <section>
 				<h4>Device Proximity</h4>
