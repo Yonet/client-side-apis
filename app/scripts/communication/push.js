@@ -7,7 +7,7 @@ var notify = function() {
     tag: 'foo',
     type: 'basic'
   };
-  var n = new Notification('Greetings from ForwardJS!', options);
+  var n = new Notification('Greetings from Front End Masters!', options);
 
   n.onclick = function() {
     console.log('Clicked.');

@@ -10,3 +10,4 @@ Gemfile.lock
 .vscode/
 .publish
 config.js
+*.log

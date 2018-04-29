@@ -59,7 +59,7 @@ html, body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 16px;
-  height: 151px;
+  height: 90px;
 }
 .demo-avatar-dropdown {
   display: -webkit-flex;
@@ -218,3 +218,13 @@ _:-ms-input-placeholder, :root .demo-graph {
   height: 400px;
   width: 100%;
  }
+
+#view-source {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
