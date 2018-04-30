@@ -196,6 +196,7 @@
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
           <section class="mdl-tabs__panel  is-active" id="network">
+            <!--TODO: make it pretty-->
             <div>
               The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.).
               This can be used to select high definition content or low definition content based on the user's connection. The entire API consists of the addition of the NetworkInformation interface and a single property to the Navigator interface: Navigator.connection.
@@ -429,6 +430,7 @@
               </div>
             </section>
             <section class="mdl-tabs__panel " id="indexeddb">
+              <!--TODO: change the example to a todo list, and exercise to saving images from the video stream.-->
               <div class="page-content">
                 <p>
                   IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
@@ -443,7 +445,19 @@
               </div>
             </section>
             <section class="mdl-tabs__panel " id="exercise3">
-                <div class="page-content">exercise</div>
+                <div class="page-content">Exercise</div>
+              <!--TODO:write description, create an exercise.js file-->
+              <form>
+                <div class="remember">
+                  <label for="entername">Enter your name:</label>
+                  <input id="entername" type="text" required>
+                  <input id="submitname" type="submit" value="Say hello">
+                </div>
+                <div class="forget">
+                  <label for="forgetname">Want me to forget you?</label>
+                  <input id="forgetname" type="reset" value="Forget">
+                </div>
+              </form>
               </section>
           </div>
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">

@@ -11,3 +11,4 @@ Gemfile.lock
 .publish
 config.js
 *.log
+app/scripts/solutions/*

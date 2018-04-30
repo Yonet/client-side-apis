@@ -122,7 +122,14 @@
 
     <section>
       <h2>How do APIs work?</h2>
+      <ul>
+        <li>Objects</li>
+        <li>Recognizable Entry Points</li>
+        <li>Events to handle changes in state</li>
+        <li>Security mechanisms</li>
+      </ul>
       <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">JavaScript Objects</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Client-Side Web Events</a>
       <aside class="notes">
         Different JavaScript APIs work in slightly different ways, but generally, they have common features and similar
         themes to how they work.
@@ -130,6 +137,13 @@
         APIs are interacted with in your code using one or more JavaScript objects, which serve as containers for the
         data the API uses (contained in object properties),
         and the functionality the API makes available (contained in object methods).
+        Entry points: When using an API, you should make sure you know where the entry point is for the API.
+        In The Geolocation API, this is pretty simple — it is the Navigator.geolocation property,
+        which returns the browser's Geolocation object that all the useful geolocation methods are available inside.
+        Security:
+        sometimes have additional security mechanisms in place.
+        For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include Service Workers and Push).
+        Some WebAPIs request permission to be enabled.
       </aside>
 
     </section>
@@ -287,6 +301,99 @@ navigator.connection.addEventListener('change', changeHandler);
     </section>
     <section>
       <h4>Data Management APIs</h4>
+      <ul>
+        <li>Persistent Storage</li>
+        <li>Temporary Storage</li>
+      </ul>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a>
+      <aside class="notes">
+        Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example in Firefox you can choose to delete all stored data or only stored data from selected origins by going to Preferences and using the options under Privacy & Security > Cookies & Site Data.)
+        Temporary: This is data that doesn't need to persist for such long time . This will be evicted under a least recently used (LRU policy) when Storage limits are reached.
+
+        Storage is temporary by default; developers can choose to use persistent storage for their sites using the StorageManager.persist() method available in the Storage API.
+
+        There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively);
+        the exact limit varies depending on the browser and possibly based on user settings. See Browser storage limits and eviction criteria for more information.
+
+        consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then retrieve it when needed.
+        This has many distinct uses, such as:
+
+        Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).
+        Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).
+        Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be usable without a network connection.
+        Saving web application generated documents locally for use offline
+
+      </aside>
+    </section>
+    <section>
+      <li>Past:Cookies</li>
+      <li>Current: Web Storage and IndexedDB</li>
+      <li>Future: Cache API</li>
+      <aside class="notes">
+        Cookies:
+        The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used cookies to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
+
+        Because of that age, there are a number of problems — both technical and user experience-wise — afflicting cookies.
+        These problems are significant enough that upon visiting a site for the first time, people living in Europe are shown messages informing them if they will use cookies to store data about them.
+        This is due to a piece of European Union legislation known as the EU Cookie directive.
+
+        The only advantage cookies have is that they're supported by extremely old browsers.
+
+        Q: Why are there still new sites being created using cookies? This is mostly because of developers' habits, use of older libraries that still use cookies, and the existence of many web sites providing out-of-date reference and training materials to learn how to store data.
+        WebStorage:
+        he Web Storage API provides a very simple syntax for storing and retrieving smaller,
+        data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data,
+        like the user's name, whether they are logged in, what color to use for the background of the screen, etc.
+
+        IndexedDB API: provides the browser with a complete database system for storing complex data.
+        This can be used for things from complete sets of customer records to even complex data types like audio or video files.
+
+        Cache API is designed for storing HTTP responses to specific requests,
+        and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection.
+        Cache is usually used in combination with the Service Worker API, although it doesn't have to be.
+
+      </aside>
+    </section>
+    <!--https://developer.mozilla.org/en-US/docs/Web/API/Storage_API-->
+    <!--The Storage Standard defines a common, shared storage system to be used by all APIs and technologies that store content-accessible data for individual Web sites. The Storage API gives sites' code the ability to find out how much space they can use, how much they are already using, and even control whether or not they need to be alerted before the user agent disposes of site data in order to make room for other things.-->
+
+    <!--Note: This feature is available in Web Workers.-->
+    <!--Site storage—the data stored for a Web site which is managed by the Storage Standard—includes:-->
+
+    <!--IndexedDB databases-->
+    <!--Cache API data-->
+    <!--Service Worker registrations-->
+    <!--Web Storage API data managed using window.localStorage-->
+    <!--History state information saved using History.pushState()-->
+    <!--Application caches-->
+    <!--Notification data-->
+    <!--Other kinds of site-accessible, site-specific data that may be maintained-->
+
+    <!--&#45;&#45;-->
+    <!--LRU policyEdit-->
+    <!--When the available disk space is filled up, the quota manager will start clearing out data based on a LRU policy — the least recently used origin will be deleted first, then the next one, until the browser is no longer over the limit.-->
+
+    <!--We track the "last access time" for each origin using temporary storage. Once the global limit for temporary storage is reached (more on the limit later), we try to find all currently unused origins (i.e. ones with no tabs/apps open that are keeping open datastores). These are then sorted according to "last access time". The least recently used origins are then deleted until there's enough space to fulfill the request that triggered this origin eviction.-->
+    <section>
+      <h2>Web Storage API</h2>
+      <ul>
+        <li>Session Storage</li>
+        <li>Local Storage</li>
+      </ul>
+      <code>
+        localStorage.setItem('name','Aysegul');
+        var myName = localStorage.getItem('name');
+        localStorage.removeItem('name');
+      </code>
+      <p>
+        Open Chrome Dev Tools > Application > Storage > Local Storage
+      </p>
+      <aside class="notes">
+        There is a separate data store for each domain (each separate web address loaded in the browser).
+        You will see that if you load two websites (say google.com and amazon.com) and try storing an item on one website,
+        it won't be available to the other website.
+        TODO: Exercise: personalized page. Forget me button!
+      </aside>
     </section>
     <section>
       <h4>Session Storage</h4>
@@ -344,6 +451,7 @@ sessionStorage.clear();
         <li>JsStore: An IndexedDB wrapper with SQL like syntax.
         </li>
       </ul>
+      <!--https://developer.mozilla.org/en-US/docs/Web/API/IDBEnvironment-->
     </section>
     <section>
       <h2>Resources</h2>
