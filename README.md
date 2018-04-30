@@ -2,6 +2,8 @@
 
 ## Overview
 
+Exercecises and slides for FrontEndMasters Client-side APIs workshop. 
+
 
 ### Features
 
@@ -10,10 +12,10 @@
 
 [Download](https://github.com/Yonet/client-side-apis) or clone this repository and build on what is included in the `app` directory.
 
-Be sure to look over the [installation docs](docs/install.md) to verify your environment is prepared to run WSK.
-Once you have verified that your system can run WSK, check out the [commands](docs/commands.md) available to get started.
+To serve this repo locally, you can install http-server globally and use the start script on the package.json.
 
 ```bash
+yarn global add http-server
 yarn install
 yarn start
 ```
@@ -27,12 +29,9 @@ yarn start
 * [Deployment guides](https://github.com/google/web-starter-kit/blob/master/docs/deploy.md) - available for Firebase, Google App Engine and other services.
 * [Gulp recipes](https://github.com/gulpjs/gulp/tree/master/docs/recipes) - the official Gulp recipes directory includes a comprehensive list of guides for different workflows you can add to your project.
 
-## Inspiration
-
 
 ## Contributing
 
-Contributions, questions and comments are all welcome and encouraged. For code contributions to Web Starter Kit, please see our [Contribution guide](CONTRIBUTING.md) before submitting a pull request. [Website](https://developers.google.com/web/tools/starter-kit/) related issues should be filed on the [Web Fundamentals](https://github.com/google/WebFundamentals/issues/new) issue tracker.
 
 ## License
 
