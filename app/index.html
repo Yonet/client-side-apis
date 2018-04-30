@@ -28,30 +28,15 @@
 
   <link rel="shortcut icon" href="images/favicon.png">
 
-  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-  <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-  </style>
 </head>
-
 <body>
+
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <!--Header-->
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">Client-side Web APIs</span>
@@ -75,23 +60,11 @@
         </ul>
       </div>
     </header>
+    <!--/Header-->
+    <!--Left Nav-->
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
       <header class="demo-drawer-header">
         <img src="images/user.jpg" class="demo-avatar">
-        <!-- <div class="demo-avatar-dropdown"> -->
-        <!-- <span>Hello</span> -->
-        <!-- <div class="mdl-layout-spacer"></div> -->
-        <!-- <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">arrow_drop_down</i>
-            <span class="visuallyhidden">Accounts</span>
-          </button>
-          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-            <li class="mdl-menu__item">hello@example.com</li>
-            <li class="mdl-menu__item">info@example.com</li>
-            <li class="mdl-menu__item">
-              <i class="material-icons">add</i>Add another account...</li>
-          </ul> -->
-        <!-- </div> -->
       </header>
       <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
         <a class="mdl-navigation__link" href="#home">
@@ -102,6 +75,8 @@
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>Hardware</a>
         <a class="mdl-navigation__link" href="#storage">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Storage</a>
+        <a class="mdl-navigation__link" href="/slides.html">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">description</i>Slides</a>
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="">
             <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>
@@ -109,11 +84,16 @@
           </a>
       </nav>
     </div>
+    <!--/Left Nav-->
+    <!--Main Panel-->
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid demo-content" id="home">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
           <div class="mdl-card__supporting-text">
             <h4>What are APIs</h4>
+            <p>
+              Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.
+            </p>
             <p>
               When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces
               for manipulating different aspects of the browser and operating system the site is running on, or even data
@@ -122,19 +102,19 @@
             </p>
           </div>
         </div>
+        <!--Nav-->
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
           <ul>
             <li><a href="#communication">Communication</a>
               <ul>
-                <li>Network Information</li>
-                <li>Bluetooth</li>
-                <li>Push API</li>
+                <li><a href="#network">Network Information</a></li>
+                <li><a href="#bluetooth">Bluetooth</a></li>
+                <li><a href="#push">Push API</a></li>
               </ul>
             </li>
             <li><a href="#hardware">Hardware</a>
               <ul>
-                <li>Device Orientation</li>
-                <!-- <li>Device Proximity</li> -->
+                <li><a href="#orientation">Device Orientation</a></li>
                 <li>Geolocation</li>
                 <li>Camera</li>
               </ul>
@@ -148,7 +128,9 @@
             </li>
           </ul>
         </div>
+        <!--/Nav-->
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+          <!--Resources-->
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
             <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
               <h2 class="mdl-card__title-text">Resources</h2>
@@ -157,9 +139,10 @@
               Web APIs
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
             </div>
           </div>
+          <!--/Resources-->
           <div class="demo-separator mdl-cell--1-col"></div>
           <!-- Purple -->
           <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
@@ -197,6 +180,7 @@
         </div>
       </div>
       <!-- /Home -->
+
       <!-- Communication -->
       <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="communication">
 
@@ -212,13 +196,30 @@
         </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
           <section class="mdl-tabs__panel  is-active" id="network">
-            <div></div>
+            <div>
+              The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.).
+              This can be used to select high definition content or low definition content based on the user's connection. The entire API consists of the addition of the NetworkInformation interface and a single property to the Navigator interface: Navigator.connection.
+            </div>
             <div class="page-content">
               <div id="network-message"></div>
             </div>
           </section>
+
           <section class="mdl-tabs__panel " id="bluetooth">
-            <div class="page-content">Bluetooth</div>
+            <button id="connect-btn" class="mdl-button">CONNECT</button>
+            <button id="disconnect-btn" class="mdl-button hidden">DISCONNECT</button>
+            <button id="power-btn" class="mdl-button hidden">POWER</button>
+            <div id="colors" class="hidden">
+              RED
+              <input id="red" class="mdl-slider mdl-js-slider" type="range"
+                     min="0" max="255" value="100" tabindex="0">
+              GREEN
+              <input id="green" class="mdl-slider mdl-js-slider" type="range"
+                     min="0" max="255" value="100" tabindex="0">
+              BLUE
+              <input id="blue" class="mdl-slider mdl-js-slider" type="range"
+                     min="0" max="255" value="100" tabindex="0">
+              <button id="update-color" class="mdl-button">UPDATE</button>
           </section>
           <section class="mdl-tabs__panel " id="push">
             <div class="page-content">
@@ -428,7 +429,10 @@
               </div>
             </section>
             <section class="mdl-tabs__panel " id="indexeddb">
-              <div class="page-content">IndexedDB
+              <div class="page-content">
+                <p>
+                  IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
+                </p>
                   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
                   id="add-indexed">
                   <i class="material-icons" role="presentation">add</i>
@@ -494,9 +498,10 @@
       </div>
       <!-- /Storage -->
     </main>
+    <!--/Main Panel-->
   </div>
 
-  <a href="https://github.com/Yonet/client-side-apis" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a>
+  <a href="https://github.com/Yonet/client-side-apis" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Github</a>
 
   <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
@@ -516,7 +521,7 @@
   <script src="scripts/main.js"></script>
   <script src="scripts/communication/push.js"></script>
   <script src="scripts/communication/network.js"></script>
-  <!-- <script src="scripts/communication/bluetooth.js"></script> -->
+   <script src="scripts/communication/bluetooth.js"></script>
   <!-- <script src="scripts/hardware/vibrations.js"></script> -->
   <script src="scripts/hardware/camera.js"></script>
   <!-- <script src="scripts/hardware/proximity.js"></script> -->

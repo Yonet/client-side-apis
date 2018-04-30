@@ -2,69 +2,157 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<title>Client-side Web APIs slides</title>
+  <title>Client-side Web APIs slides</title>
 
-	<meta name="description" content="Client-side web APIs workshop slides">
-	<meta name="author" content="Aysegul Yonet">
+  <meta name="description" content="Client-side web APIs workshop slides">
+  <meta name="author" content="Aysegul Yonet">
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="styles/slides/reveal.css">
-	<link rel="stylesheet" href="styles/slides/theme/black.css" id="theme">
+  <link rel="stylesheet" href="styles/slides/reveal.css">
+  <link rel="stylesheet" href="styles/slides/theme/black.css" id="theme">
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="scripts/lib/css/zenburn.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="scripts/lib/css/zenburn.css">
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match(/print-pdf/gi) ? 'styles/slides/print/pdf.css' : 'styles/slides/print/paper.css';
-		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'styles/slides/print/pdf.css' : 'styles/slides/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 
-	<!--[if lt IE 9]>
-		<script src="scripts/lib/js/html5shiv.js"></script>
-		<![endif]-->
+  <!--[if lt IE 9]>
+  <script src="scripts/lib/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<h1>Client-side Web APIs</h1>
-				<p>Repo: https://github.com/Yonet/client-side-apis</p>
-				<p>npm i -g gulp</p>
-				<p>
-					<small>Created by
-						<a href="https://twitter.com/AysSomething">Aysegul Yonet</a>
-					</small>
-				</p>
-			</section>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Client-side Web APIs</h1>
+      <p>Repo: https://github.com/Yonet/client-side-apis</p>
+      <p>npm i -g gulp</p>
+      <p>
+        <small>Created by
+          <a href="https://twitter.com/AysSomething">Aysegul Yonet</a>
+        </small>
+      </p>
+    </section>
 
-      <section>
-        <h4>Experimental Chrome Flags</h4>
-        <p>
-          <small>Enable following experimental flags on chrome browser.</small>
-        </p>
-        <ul>
-          <small>
-            <li>Experimental JavaScript</li>
-            <li>Experimental Web Platform features</li>
-            <li>Developer Tools experiments</li>
-          </small>
-        </ul>
-      </section>
+    <section>
+      <h2>Web APIs</h2>
+      <ul>
+        <li>What are APIs?</li>
+        <li>How do APIs work?</li>
+        <li>How do we debug APIs?</li>
+      </ul>
+      <aside class="notes">
 
-			<section>
-				<h4>Network Information</h4>
-				<pre><code class="hljs" data-trim contenteditable>
+        We'll start by looking at APIs from a high level —
+        what are they, how do they work, how do you use them in your code, and how are they structured?
+        We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.
+      </aside>
+    </section>
+    <section>
+      <h2>Web APIs</h2>
+      <p>
+        Application Programming Interfaces (APIs) are constructs made available in programming languages to allow
+        developers to create complex functionality more easily.
+        They abstract more complex code away from you, providing some easier syntax to use in its place.
+      </p>
+      <aside class="notes">
+        Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript
+        language itself, rather they are built on top of the core JavaScript language, providing you with extra
+        superpowers to use in your JavaScript code. They generally fall into two categories:
+
+      </aside>
+    </section>
+    <section>
+      <h2>What are Browser APIs?</h2>
+      <aside class="notes">
+        Browser APIs are built into your web browser and are able to expose data from the browser and surrounding
+        computer environment and do useful complex things with it. For example, the Geolocation API provides some simple
+        JavaScript constructs for retrieving location data so you can say, plot your location on a Google Map.
+        . In the background, the browser is actually using some complex lower-level code (e.g. C++) to communicate with
+        the device's GPS hardware (or whatever is available to determine position data), retrieve position data, and
+        return it to the browser environment to use in your code.
+        But again, this complexity is abstracted away from you by the API.
+        Third party APIs are not built into the browser by default, and you generally have to grab their code and
+        information from somewhere on the Web.
+        For example, the Twitter API allows you to do things like displaying your latest tweets on your website.
+        We will use a third party api to access a smart light bulb.
+      </aside>
+
+    </section>
+
+    <section>
+      <h2>What are Third party APIs?</h2>
+      <ul>
+        <li>Google Maps API</li>
+        <li><a href="http://www.ledmagical.com/Apps/BT001EN.html">Magic Blue Smart Light Bulb</a></li>
+      </ul>
+
+      <a
+        href="https://www.amazon.com/Magic-Blue%C2%AE-Bluetooth-Smart-Light/dp/B01DE7KXW0/ref=cm_cr_arp_d_product_top?ie=UTF8">Smart
+        Bulb</a>
+      <aside class="notes">
+        Browser APIs are built into your web browser and are able to expose data from the browser and surrounding
+        computer environment and do useful complex things with it. For example, the Geolocation API provides some simple
+        JavaScript constructs for retrieving location data so you can say, plot your location on a Google Map.
+        . In the background, the browser is actually using some complex lower-level code (e.g. C++) to communicate with
+        the device's GPS hardware (or whatever is available to determine position data), retrieve position data, and
+        return it to the browser environment to use in your code.
+        But again, this complexity is abstracted away from you by the API.
+        Third party APIs are not built into the browser by default, and you generally have to grab their code and
+        information from somewhere on the Web.
+        For example, the Twitter API allows you to do things like displaying your latest tweets on your website.
+        We will use a third party api to access a smart light bulb.
+      </aside>
+
+    </section>
+
+    <section>
+      <h2>How do APIs work?</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">JavaScript Objects</a>
+      <aside class="notes">
+        Different JavaScript APIs work in slightly different ways, but generally, they have common features and similar
+        themes to how they work.
+        They are based on objects.
+        APIs are interacted with in your code using one or more JavaScript objects, which serve as containers for the
+        data the API uses (contained in object properties),
+        and the functionality the API makes available (contained in object methods).
+      </aside>
+
+    </section>
+
+    <section>
+      <h4>Setup</h4>
+      <p>
+        <small>Enable following experimental flags on chrome browser by typing 'chrome://flags' on chrome.</small>
+      </p>
+      <ul>
+        <small>
+          <li>Experimental JavaScript</li>
+          <li>Experimental Web Platform features</li>
+          <li>Developer Tools experiments</li>
+          <li>Image Capture API</li>
+        </small>
+      </ul>
+    </section>
+
+
+    <section>
+      <h4>Network Information</h4>
+      <pre><code class="hljs" data-trim contenteditable>
 enum ConnectionType {
 	"bluetooth",
 	"cellular",
@@ -78,11 +166,11 @@ enum ConnectionType {
 };
 </code></pre>
 
-			</section>
-			</section>
-			<section>
-				<h4>Network Information</h4>
-<pre><code class="hljs" data-trim contenteditable>
+    </section>
+    </section>
+    <section>
+      <h4>Network Information</h4>
+      <pre><code class="hljs" data-trim contenteditable>
 enum EffectiveConnectionType {
 	"2g",
 	"3g",
@@ -91,10 +179,10 @@ enum EffectiveConnectionType {
 };
 </code></pre>
 
-			</section>
-			<section>
-				<h4>Network Information</h4>
-<pre><code class="hljs" data-trim contenteditable>
+    </section>
+    <section>
+      <h4>Network Information</h4>
+      <pre><code class="hljs" data-trim contenteditable>
 interface NetworkInformation : EventTarget {
 	readonly attribute ConnectionType          type;
 	readonly attribute EffectiveConnectionType effectiveType;
@@ -105,52 +193,107 @@ interface NetworkInformation : EventTarget {
 				attribute EventHandler            onchange;
 };
 </code></pre>
-<p>The "saveData" attribute, when getting, returns true if the user has requested a reduced data usage mode from the user agent, and false otherwise.</p>
-			</section>
-			<section>
-				<h4>Network Information</h4>
+      <p>The "saveData" attribute, when getting, returns true if the user has requested a reduced data usage mode from
+        the user agent, and false otherwise.</p>
+    </section>
+    <section>
+      <h4>Network Information</h4>
 
-<pre><code class="hljs" data-trim contenteditable>
+      <pre><code class="hljs" data-trim contenteditable>
 navigator.connection.addEventListener('change', changeHandler);
 </code></pre>
-		<a href="http://wicg.github.io/netinfo/">More info</a>
-			</section>
-			<section>
-				<h4>Bluetooth</h4>
-			</section>
-			<section>
-				<h4>Bluetooth</h4>
-				<img src="images/enabledevmode.png" alt="Enable Developer Mode">
-			</section>
-			<section>
-				<h4>Push API</h4>
-			</section>
-			<section>
-				<h4>Hardware</h4>
-			</section>
-			<section>
-				<h4>Device Orientation</h4>
-				<img src="images/screen.png" alt="screen-object">
+      <a href="http://wicg.github.io/netinfo/">More info</a>
+    </section>
+    <section>
+      <h4>Geolocation API</h4>
+      <ul>
+        <li>Geolocation</li>
+        <li>Position</li>
+        <li>Coordinates</li>
+      </ul>
+      <aside>
 
-			</section>
-			<!-- <section>
-				<h4>Device Proximity</h4>
-			</section> -->
-			<section>
-				<h4>Geolocation</h4>
-			</section>
-			<section>
-				<h4>Camera</h4>
-			</section>
-			<section>
-				<h4>Data Management APIs</h4>
-			</section>
-			<section>
-				<h4>Session Storage</h4>
-				<ul>
-					<li>Cleared when the user session is over</li>
-				</ul>
-<pre><code class="hljs" data-trim contenteditable>
+      </aside>
+    </section>
+    <section>
+      <h4>Geolocation</h4>
+
+      <ul>
+        <li>Geolocation.getCurrentPosition(success, error?, [options]):
+          <ul>
+            <li>enableHighAccuracy = booleanValue</li>
+            <li>timeout (milliseconds)</li>
+            <li>maximumAge (milliseconds)</li>
+          </ul>
+        </li>
+        <li>Geolocation.watchPosition()</li>
+        <li>Geolocation.clearWatch()</li>
+      </ul>
+      <code>
+        const options = options = {
+          enableHighAccuracy: false,
+          timeout: 5000,
+          maximumAge: 0
+        };
+        functions success(position) {//Do something with the position data};
+        function error(err) { //Handle the error};
+        const watchId = navigator.geolocation.watchPosition(success, error, options);
+        navigator.geolocation.clearWatch(watchId);
+      </code>
+      <aside class="notes">
+        PositionOptions.enableHighAccuracy:
+        Is a Boolean that indicates the application would like to receive the best possible results.
+        If true and if the device is able to provide a more accurate position, it will do so.
+        Note that this can result in slower response times or increased power consumption (with a GPS chip on a mobile
+        device for example).
+        On the other hand, if false, the device can take the liberty to save resources by responding more quickly and/or
+        using less power. Default: false.
+        PositionOptions.maximumAge:
+        Is a positive long value indicating the maximum age in milliseconds of a possible cached position that is
+        acceptable to return.
+        If set to 0, it means that the device cannot use a cached position and must attempt to retrieve the real current
+        position.
+        If set to Infinity the device must return a cached position regardless of its age. Default: 0.
+        Geolocation.watchPosition():
+        The Geolocation method watchPosition() method is used to register a handler function that will be called
+        automatically each time the position of the device changes.
+        This method returns a watch ID value that then can be used to unregister the handler by passing it to the
+        Geolocation.clearWatch() method.
+      </aside>
+    </section>
+    <section>
+      <h4>Bluetooth</h4>
+      <img src="images/enabledevmode.png" alt="Enable Developer Mode">
+    </section>
+    <section>
+      <h4>Push API</h4>
+    </section>
+    <section>
+      <h4>Hardware</h4>
+    </section>
+    <section>
+      <h4>Device Orientation</h4>
+      <img src="images/screen.png" alt="screen-object">
+
+    </section>
+    <!-- <section>
+			  <h4>Device Proximity</h4>
+		  </section> -->
+    <section>
+      <h4>Geolocation</h4>
+    </section>
+    <section>
+      <h4>Camera</h4>
+    </section>
+    <section>
+      <h4>Data Management APIs</h4>
+    </section>
+    <section>
+      <h4>Session Storage</h4>
+      <ul>
+        <li>Cleared when the user session is over</li>
+      </ul>
+      <pre><code class="hljs" data-trim contenteditable>
 // Save data to sessionStorage
 sessionStorage.setItem('key', 'value');
 
@@ -163,92 +306,111 @@ sessionStorage.removeItem('key');
 // Remove all saved data from sessionStorage
 sessionStorage.clear();
 </code></pre>
-			</section>
-			<section>
-				<h4>Local Storage</h4>
-				<ul>
-					<li>Limited to ~10 MB per origin</li>
-					<li>Cleared upon exiting on Incognito mode</li>
-					<li>Since localStorage and sessionStorage are instances, they do not support prototyping. However, Storage API supports prototyping.
-						</li>
-				</ul>
-			</section>
-			<section>
-				<h4>IndexedDB</h4>
-				<ul>
-					<li>Good for large amounts of structured data that requires high performance retrieval
-						</li>
-					<li>Operations as done asynchronously as opposed to the synchronous Storage API.
-						</li>
-					<li>Storage limit is browser and client dependent. </li>
-						<li>You can create indexes based on multiple properties of objects resulting in fast query times.
-							</li>
-							<li>Intended to power offline webapps.
-								</li>
-				</ul>
-			</section>
-			<section>
-					<h4>IndexedDB</h4>
-					<ul>
-						<li>dexie.js: A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
+    </section>
+    <section>
+      <h4>Local Storage</h4>
+      <ul>
+        <li>Limited to ~10 MB per origin</li>
+        <li>Cleared upon exiting on Incognito mode</li>
+        <li>Since localStorage and sessionStorage are instances, they do not support prototyping. However, Storage API
+          supports prototyping.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h4>IndexedDB</h4>
+      <ul>
+        <li>Good for large amounts of structured data that requires high performance retrieval
+        </li>
+        <li>Operations as done asynchronously as opposed to the synchronous Storage API.
+        </li>
+        <li>Storage limit is browser and client dependent.</li>
+        <li>You can create indexes based on multiple properties of objects resulting in fast query times.
+        </li>
+        <li>Intended to power offline webapps.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h4>IndexedDB</h4>
+      <ul>
+        <li>dexie.js: A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 
-							</li>
-						<li>ZangoDB: A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection, sorting, updating and aggregation features of MongoDB.
+        </li>
+        <li>ZangoDB: A MongoDB-like interface for IndexedDB that supports most of the familiar filtering, projection,
+          sorting, updating and aggregation features of MongoDB.
 
-							</li>
-						<li>JsStore: An IndexedDB wrapper with SQL like syntax.
-							</li>
-					</ul>
-				</section>
-			<!-- <section>
-						<h2>Marvelous List</h2>
-						<ul>
-							<li>No order here</li>
-							<li>Or here</li>
-							<li>Or here</li>
-							<li>Or here</li>
-						</ul>
-					</section> -->
+        </li>
+        <li>JsStore: An IndexedDB wrapper with SQL like syntax.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://caniuse.com/#feat=canvas">CanIUse.com</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">List of Web APIs on Mozilla Developer Network</a>
+        </li>
+        <li><a href="https://developers.google.com/web/fundamentals/">Google Developers - Web Fundamentals</a></li>
+        <li></li>
+      </ul>
+    </section>
 
-			<section style="text-align: left;">
-				<h1>THE END</h1>
-				<p>
-					-
-					<a href="https://twitter.com/AysSomething">@AysSomething</a>
-					<br> -
-					<a href="https://github.com/Yonet/client-side-apis">Demo source code</a>
-				</p>
-			</section>
-		</div>
-	</div>
+    <section style="text-align: left;">
+      <h1>THE END</h1>
+      <p>
+        -
+        <a href="https://twitter.com/AysSomething">@AysSomething</a>
+        <br> -
+        <a href="https://github.com/Yonet/client-side-apis">Demo source code</a>
+      </p>
+    </section>
+  </div>
+</div>
 
-	<script src="scripts/lib/js/head.min.js"></script>
-	<script src="scripts/js/reveal.js"></script>
+<script src="scripts/lib/js/head.min.js"></script>
+<script src="scripts/js/reveal.js"></script>
 
-	<script>
+<script>
 
-		// More info https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			history: true,
-			center: true,
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
 
-			transition: 'slide', // none/fade/slide/convex/concave/zoom
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-			// More info https://github.com/hakimel/reveal.js#dependencies
-			dependencies: [
-				{ src: 'scripts/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-				{ src: 'scripts/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-				{ src: 'scripts/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-				{ src: 'scripts/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-				{ src: 'scripts/plugin/search/search.js', async: true },
-				{ src: 'scripts/plugin/zoom-js/zoom.js', async: true },
-				{ src: 'scripts/plugin/notes/notes.js', async: true }
-			]
-		});
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      {
+        src: 'scripts/lib/js/classList.js', condition: function () {
+          return !document.body.classList;
+        }
+      },
+      {
+        src: 'scripts/plugin/markdown/marked.js', condition: function () {
+          return !!document.querySelector('[data-markdown]');
+        }
+      },
+      {
+        src: 'scripts/plugin/markdown/markdown.js', condition: function () {
+          return !!document.querySelector('[data-markdown]');
+        }
+      },
+      {
+        src: 'scripts/plugin/highlight/highlight.js', async: true, callback: function () {
+          hljs.initHighlightingOnLoad();
+        }
+      },
+      {src: 'scripts/plugin/search/search.js', async: true},
+      {src: 'scripts/plugin/zoom-js/zoom.js', async: true},
+      {src: 'scripts/plugin/notes/notes.js', async: true}
+    ]
+  });
 
-	</script>
+</script>
 
 </body>
 
