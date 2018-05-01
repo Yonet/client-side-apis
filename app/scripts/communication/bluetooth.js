@@ -21,7 +21,7 @@ function connect() {
   console.log('Connecting to the Magic Bulb');
   navigator.bluetooth.requestDevice(
     {
-      filters: [{namePrefix:"LED", optionalServices: "TSfX9T6riEzfE1U6pIfOuw=="}]
+      filters: [{namePrefix:"LED"}]
     })
     .then(device => {
       console.log('> Found ' + device.name);

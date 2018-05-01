@@ -440,7 +440,20 @@
       </div>
       <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
         <section class="mdl-tabs__panel  is-active" id="session">
-          <div class="page-content">session</div>
+          <div class="page-content"><div class="page-content">
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sessionKey">
+                <label class="mdl-textfield__label" for="sessionKey">Key</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sessionValue">
+                <label class="mdl-textfield__label" for="ssessionValue">Value</label>
+              </div>
+              <button id="sessionButton" class="mdl-button">Store</button>
+            </form>
+            
+          </div></div>
         </section>
         <section class="mdl-tabs__panel " id="local">
           <div class="page-content">
@@ -479,10 +492,11 @@
               Change your profile picture and background color. Use local storage to save the image and color choice.
               Set the saved image and background color from the local storage when you refresh your page.
             </p>
+            <img src="images/dog.png" alt="" id="profile-image">
 
           </div>
 
-          <form class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <!-- <form class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <div class="mdl-textfield mdl-js-textfield">
               <label for="bg-color">Enter your favorite color:</label>
               <input id="bg-color" type="text" class="mdl-textfield__input" value="FF0000" required>
@@ -496,23 +510,15 @@
                 <option value="'Ubuntu Mono'">Monospace</option>
               </select>
             </div>
-            <div>
-              <label for="image">Choose image:</label>
-
-              <select id="image">
-                <option value="images/firefoxos.png" selected>Firefox</option>
-                <option value="images/crocodile.png">Crocodile</option>
-                <option value="images/tortoise.png">Tortoise</option>
-              </select>
-            </div>
+            
             <div class="mdl-textfield mdl-js-textfield">
               <label for="changeimage" class="mdl-textfield__label">Upload your image:</label>
               <input id="changeimage" type="file"  name="changeimage" accept=".jpg, .jpeg, .png" class="mdl-textfield__input">
             </div>
-          </form>
-          <div class="preview">
+          </form> -->
+          <!-- <div class="preview">
             <p>No files currently selected for upload</p>
-          </div>
+          </div> -->
         </section>
 
         <section class="mdl-tabs__panel " id="indexeddb">
@@ -540,18 +546,10 @@
         <section class="mdl-tabs__panel " id="exercise4">
 
           <div class="page-content">Exercise</div>
-          <!--TODO:write description, create an exercise.js file-->
-          <form class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <div class="remember" class="mdl-textfield mdl-js-textfield">
-              <label for="entername">Enter your name:</label>
-              <input id="entername" type="text" class="mdl-textfield__input" required>
-              <input id="submitname" type="submit" class="mdl-textfield__input" value="Say hello">
-            </div>
-            <div class="forget" class="mdl-textfield mdl-js-textfield">
-              <label for="forgetname" class="mdl-textfield__label">Want me to forget you?</label>
-              <input id="forgetname" type="reset" value="Forget" class="mdl-textfield__input">
-            </div>
-          </form>
+          <p>
+            Grab images from the camera stream and save it to IndexedDB.
+          </p>
+          
         </section>
       </div>
       <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
@@ -629,8 +627,8 @@
 
 <script src="scripts/main.js"></script>
 <script src="scripts/communication/push.js"></script>
-<script src="scripts/communication/network.js"></script>
-<script src="scripts/communication/bluetooth.js"></script>
+<!-- <script src="scripts/communication/network.js"></script> -->
+<!--<script src="scripts/communication/bluetooth.js"></script>-->
 <script src="scripts/hardware/camera.js"></script>
 <script src="scripts/hardware/orientation.js"></script>
 <script defer src="scripts/hardware/geolocation.js"></script>
