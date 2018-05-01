@@ -9,6 +9,6 @@ Gemfile.lock
 *.pyc
 .vscode/
 .publish
-config.js
+*/config.js
 *.log
 app/scripts/solutions/*

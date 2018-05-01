@@ -28,526 +28,620 @@
 
   <link rel="shortcut icon" href="images/favicon.png">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-    <!--Header-->
-    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Client-side Web APIs</span>
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-          <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-            <i class="material-icons">search</i>
-          </label>
-          <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" id="search">
-            <label class="mdl-textfield__label" for="search">Enter your query...</label>
-          </div>
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <!--Header-->
+  <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Client-side Web APIs</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" id="search">
+          <label class="mdl-textfield__label" for="search">Enter your query...</label>
         </div>
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-          <li class="mdl-menu__item">About</li>
-          <li class="mdl-menu__item">Contact</li>
-          <li class="mdl-menu__item">FAQ</li>
+      </div>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+        <li class="mdl-menu__item">About</li>
+        <li class="mdl-menu__item">Contact</li>
+        <li class="mdl-menu__item">FAQ</li>
+      </ul>
+    </div>
+  </header>
+  <!--/Header-->
+  <!--Left Nav-->
+  <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <header class="demo-drawer-header">
+      <img src="images/user.jpg" class="demo-avatar">
+    </header>
+    <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+      <a class="mdl-navigation__link" href="#home">
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+      <a class="mdl-navigation__link" href="#communication">
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Communication</a>
+      <a class="mdl-navigation__link" href="#hardware">
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>Hardware</a>
+      <a class="mdl-navigation__link" href="#storage">
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Storage</a>
+      <a class="mdl-navigation__link" href="./slides.html">
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">description</i>Slides</a>
+      <div class="mdl-layout-spacer"></div>
+      <a class="mdl-navigation__link" href="">
+        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>
+        <span class="visuallyhidden">Help</span>
+      </a>
+    </nav>
+  </div>
+  <!--/Left Nav-->
+  <!--Main Panel-->
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <div class="mdl-grid demo-content" id="home">
+      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+        <div class="mdl-card__supporting-text">
+          <h4>What are APIs</h4>
+          <p>
+            Application Programming Interfaces (APIs) are constructs made available in programming languages to allow
+            developers to create complex functionality more easily. They abstract more complex code away from you,
+            providing some easier syntax to use in its place.
+          </p>
+          <p>
+            When writing client-side JavaScript for web sites or applications, you won't go very far before you start to
+            use APIs — interfaces
+            for manipulating different aspects of the browser and operating system the site is running on, or even data
+            from other web sites or services. In this module, we will explore what APIs are, and how to use some of the
+            most common APIs you'll come across often in your development work.&nbsp;
+          </p>
+        </div>
+      </div>
+      <!--Nav-->
+      <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+        <ul>
+          <li><a href="#communication">Communication</a>
+            <ul>
+              <li>Network Information</li>
+              <li>Bluetooth</li>
+              <li>Push API</li>
+            </ul>
+          </li>
+          <li><a href="#hardware">Hardware</a>
+            <ul>
+              <li>Device Orientation</li>
+              <li>Geolocation</li>
+              <li>Camera</li>
+            </ul>
+          </li>
+          <li><a href="#hardware">Data Management APIs</a>
+            <ul>
+              <li>Session Storage</li>
+              <li>Local Storge</li>
+              <li>IndexedDB API</li>
+            </ul>
+          </li>
         </ul>
       </div>
-    </header>
-    <!--/Header-->
-    <!--Left Nav-->
-    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-      <header class="demo-drawer-header">
-        <img src="images/user.jpg" class="demo-avatar">
-      </header>
-      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="#home">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-        <a class="mdl-navigation__link" href="#communication">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Communication</a>
-        <a class="mdl-navigation__link" href="#hardware">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">build</i>Hardware</a>
-        <a class="mdl-navigation__link" href="#storage">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Storage</a>
-        <a class="mdl-navigation__link" href="/slides.html">
-          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">description</i>Slides</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="">
-            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>
-            <span class="visuallyhidden">Help</span>
-          </a>
-      </nav>
+      <!--/Nav-->
+      <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+        <!--Resources-->
+        <div
+          class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+            <h2 class="mdl-card__title-text">Resources</h2>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Web APIs
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank"
+               class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+          </div>
+        </div>
+        <!--/Resources-->
+        <div class="demo-separator mdl-cell--1-col"></div>
+        <!-- Purple -->
+        <div
+          class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+            <h3>Overview</h3>
+            <ul>
+              <li>
+                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Communication</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Hardware</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Storage</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Questions</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Purple -->
+      </div>
     </div>
-    <!--/Left Nav-->
-    <!--Main Panel-->
-    <main class="mdl-layout__content mdl-color--grey-100">
-      <div class="mdl-grid demo-content" id="home">
-        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-          <div class="mdl-card__supporting-text">
-            <h4>What are APIs</h4>
-            <p>
-              Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.
-            </p>
-            <p>
-              When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces
-              for manipulating different aspects of the browser and operating system the site is running on, or even data
-              from other web sites or services. In this module, we will explore what APIs are, and how to use some of the
-              most common APIs you'll come across often in your development work.&nbsp;
-            </p>
+    <!-- /Home -->
+
+    <!-- Communication -->
+    <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="communication">
+
+      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+        <div class="mdl-card__supporting-text">
+          <h4>Communication APIs</h4>
+          <div class="mdl-tabs__tab-bar">
+            <a class="mdl-tabs__tab is-active" href="#network">Network</a>
+            <a class="mdl-tabs__tab" href="#bluetooth">Bluetooth</a>
+            <a class="mdl-tabs__tab" href="#push">Push</a>
           </div>
-        </div>
-        <!--Nav-->
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-          <ul>
-            <li><a href="#communication">Communication</a>
-              <ul>
-                <li><a href="#network">Network Information</a></li>
-                <li><a href="#bluetooth">Bluetooth</a></li>
-                <li><a href="#push">Push API</a></li>
-              </ul>
-            </li>
-            <li><a href="#hardware">Hardware</a>
-              <ul>
-                <li><a href="#orientation">Device Orientation</a></li>
-                <li>Geolocation</li>
-                <li>Camera</li>
-              </ul>
-            </li>
-            <li><a href="#hardware">Data Management APIs</a>
-              <ul>
-                <li>Session Storage</li>
-                <li>Local Storge</li>
-                <li>IndexedDB API</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <!--/Nav-->
-        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <!--Resources-->
-          <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-              <h2 class="mdl-card__title-text">Resources</h2>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Web APIs
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-            </div>
-          </div>
-          <!--/Resources-->
-          <div class="demo-separator mdl-cell--1-col"></div>
-          <!-- Purple -->
-          <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-              <h3>Overview</h3>
-              <ul>
-                <li>
-                  <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Communication</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Hardware</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Storage</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Questions</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- / Purple -->
         </div>
       </div>
-      <!-- /Home -->
-
-      <!-- Communication -->
-      <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="communication">
-
-        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-          <div class="mdl-card__supporting-text">
-            <h4>Communication APIs</h4>
-            <div class="mdl-tabs__tab-bar">
-              <a class="mdl-tabs__tab is-active" href="#network">Network</a>
-              <a class="mdl-tabs__tab" href="#bluetooth">Bluetooth</a>
-              <a class="mdl-tabs__tab" href="#push">Push</a>
-            </div>
+      <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
+        <section class="mdl-tabs__panel  is-active" id="network">
+          <!--TODO: make it pretty-->
+          <div>
+            <p>The Network Information API provides information about the system's connection in terms of general
+            connection type (e.g., 'wifi', 'cellular', etc.).
+            </p>
+            <p>
+            This can be used to select high definition content or low definition content based on the user's connection.
+            The entire API consists of the addition of the NetworkInformation interface and a single property to the
+            </p>
+             <p> Navigator interface: Navigator.connection.</p>
           </div>
-        </div>
-        <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
-          <section class="mdl-tabs__panel  is-active" id="network">
-            <!--TODO: make it pretty-->
-            <div>
-              The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.).
-              This can be used to select high definition content or low definition content based on the user's connection. The entire API consists of the addition of the NetworkInformation interface and a single property to the Navigator interface: Navigator.connection.
-            </div>
-            <div class="page-content">
-              <div id="network-message"></div>
-            </div>
-          </section>
+          <div class="page-content">
+            <h5 id="network-message"></h5>
+          </div>
+        </section>
 
-          <section class="mdl-tabs__panel " id="bluetooth">
-            <button id="connect-btn" class="mdl-button">CONNECT</button>
-            <button id="disconnect-btn" class="mdl-button hidden">DISCONNECT</button>
-            <button id="power-btn" class="mdl-button hidden">POWER</button>
-            <div id="colors" class="hidden">
-              RED
-              <input id="red" class="mdl-slider mdl-js-slider" type="range"
-                     min="0" max="255" value="100" tabindex="0">
-              GREEN
-              <input id="green" class="mdl-slider mdl-js-slider" type="range"
-                     min="0" max="255" value="100" tabindex="0">
-              BLUE
-              <input id="blue" class="mdl-slider mdl-js-slider" type="range"
-                     min="0" max="255" value="100" tabindex="0">
-              <button id="update-color" class="mdl-button">UPDATE</button>
-          </section>
-          <section class="mdl-tabs__panel " id="push">
-            <div class="page-content">
+        <section class="mdl-tabs__panel " id="bluetooth">
+          <button id="connect-btn" class="mdl-button">CONNECT</button>
+          <button id="disconnect-btn" class="mdl-button ">DISCONNECT</button>
+          <button id="power-btn" class="mdl-button ">POWER</button>
+          <div id="colors" class="">
+            RED
+            <input id="red" class="mdl-slider mdl-js-slider" type="range"
+                   min="0" max="255" value="100" tabindex="0">
+            GREEN
+            <input id="green" class="mdl-slider mdl-js-slider" type="range"
+                   min="0" max="255" value="100" tabindex="0">
+            BLUE
+            <input id="blue" class="mdl-slider mdl-js-slider" type="range"
+                   min="0" max="255" value="100" tabindex="0">
+            <button id="update-color" class="mdl-button">UPDATE</button>
+        </section>
+        <section class="mdl-tabs__panel " id="push">
+          <div class="page-content">
+            <div class="mdl-textfield mdl-js-textfield">
               <input type="text" value="You have a notification" id="push-input">
               <button id="push-btn" class="mdl-button">Notify</button>
+              <!--<input type="text" value="You have a notification" id="push-input" class="mdl-textfield__input">-->
+              <!--<label for="push-input">Push message</label>-->
+              <!--<button id="push-btn" class="mdl-button">Notify</button>-->
             </div>
-          </section>
+          </div>
+        </section>
+      </div>
+      <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+        <div
+          class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+            <h2 class="mdl-card__title-text">Resources</h2>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Communication APIs
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a href="https://developer.mozilla.org/en-US/docs/WebAPI" target="_blank"
+               class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+          </div>
         </div>
-        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-              <h2 class="mdl-card__title-text">Resources</h2>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Communication APIs
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a href="https://developer.mozilla.org/en-US/docs/WebAPI" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-            </div>
+        <div class="demo-separator mdl-cell--1-col"></div>
+        <!-- Purple -->
+        <div
+          class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+            <h3>Overview</h3>
+            <ul>
+              <li>
+                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked="true">
+                  <span class="mdl-checkbox__label">Communication</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Hardware</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Storage</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Questions</span>
+                </label>
+              </li>
+            </ul>
           </div>
-          <div class="demo-separator mdl-cell--1-col"></div>
-          <!-- Purple -->
-          <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-              <h3>Overview</h3>
-              <ul>
-                <li>
-                  <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked="true">
-                    <span class="mdl-checkbox__label">Communication</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Hardware</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Storage</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Questions</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
+        </div>
+        <!-- / Purple -->
+      </div>
+    </div>
+    <!-- /Communication -->
+    <!-- Hardware-->
+    <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="hardware">
+
+      <div
+        class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid mdl-card__supporting-text">
+        <div class="mdl-card__supporting-text">
+          <h4>Hardware APIs</h4>
+          <div class="mdl-tabs__tab-bar">
+
+            <a class="mdl-tabs__tab" href="#orientation">Device Orientation</a>
+            <a class="mdl-tabs__tab" href="#geolocation">Geolocation</a>
+            <a class="mdl-tabs__tab" href="#camera">Camera</a>
           </div>
-          <!-- / Purple -->
         </div>
       </div>
-      <!-- /Communication -->
-      <!-- Hardware-->
-      <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="hardware">
-
-        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid mdl-card__supporting-text">
-          <div class="mdl-card__supporting-text">
-            <h4>Hardware APIs</h4>
-            <div class="mdl-tabs__tab-bar">
-
-                <a class="mdl-tabs__tab" href="#orientation">Device Orientation</a>
-                <a class="mdl-tabs__tab" href="#geolocation">Geolocation</a>
-                <a class="mdl-tabs__tab" href="#camera">Camera</a>
+      <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
+        <!-- <section class="mdl-tabs__panel  is-active" id="proximity">
+		  <div class="page-content">proximity</div>
+		</section> -->
+        <section class="mdl-tabs__panel " id="orientation">
+          <div class="page-content">
+            Change Device Orientation.
+            <p id="orientation"></p>
+          </div>
+        </section>
+        <section class="mdl-tabs__panel " id="geolocation">
+          <div class="page-content">
+            <button id="geo-button"
+                    class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">Get my
+              location
+            </button>
+            <p id="geo-data"></p>
+          </div>
+        </section>
+        <section class="mdl-tabs__panel " id="camera">
+          <div class="page-content">camera
+            <div id='results'>
+              <div>
+                <video autoplay></video>
+                <button id='getUserMediaButton'
+                        class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">Get
+                  User Media
+                </button>
+              </div>
+              <div>
+                <canvas id='grabFrameCanvas'></canvas>
+                <button id='grabFrameButton'
+                        class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp"
+                        disabled>Grab Frame
+                </button>
+              </div>
+              <div>
+                <canvas id='takePhotoCanvas'></canvas>
+                <button id='takePhotoButton'
+                        class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp"
+                        disabled>Take Photo
+                </button>
               </div>
             </div>
-          </div>
-          <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
-            <!-- <section class="mdl-tabs__panel  is-active" id="proximity">
-              <div class="page-content">proximity</div>
-            </section> -->
-            <section class="mdl-tabs__panel " id="orientation">
-              <div class="page-content">
-                Change Device Orientation.
-                <p id="orientation"></p>
-              </div>
-            </section>
-            <section class="mdl-tabs__panel " id="geolocation">
-              <div class="page-content">
-                <button id="geo-button"class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">Get my location</button>
-                <p id="geo-data"></p>
-              </div>
-            </section>
-            <section class="mdl-tabs__panel " id="camera">
-                <div class="page-content">camera
-                    <div id='results'>
-                        <div>
-                          <video autoplay></video>
-                          <button id='getUserMediaButton' class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp">Get User Media</button>
-                        </div>
-                        <div>
-                          <canvas id='grabFrameCanvas'></canvas>
-                          <button id='grabFrameButton'  class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp" disabled>Grab Frame</button>
-                        </div>
-                        <div>
-                          <canvas id='takePhotoCanvas'></canvas>
-                          <button id='takePhotoButton'  class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp" disabled>Take Photo</button>
-                        </div>
-                      </div>
 
-                </div>
-              </section>
           </div>
-        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-              <h2 class="mdl-card__title-text">Resources</h2>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Hardware APIs
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a href="https://developer.mozilla.org/en-US/docs/WebAPI" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-            </div>
+        </section>
+      </div>
+      <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+        <div
+          class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+            <h2 class="mdl-card__title-text">Resources</h2>
           </div>
-          <div class="demo-separator mdl-cell--1-col"></div>
-          <!-- Purple -->
-          <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-              <h3>Overview</h3>
-              <ul>
-                <li>
-                  <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked="true">
-                    <span class="mdl-checkbox__label">Communication</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" checked="true">
-                    <span class="mdl-checkbox__label">Hardware</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Storage</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Questions</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Hardware APIs
           </div>
-          <!-- / Purple -->
+          <div class="mdl-card__actions mdl-card--border">
+            <a href="https://developer.mozilla.org/en-US/docs/WebAPI" target="_blank"
+               class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+          </div>
+        </div>
+        <div class="demo-separator mdl-cell--1-col"></div>
+        <!-- Purple -->
+        <div
+          class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+            <h3>Overview</h3>
+            <ul>
+              <li>
+                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked="true">
+                  <span class="mdl-checkbox__label">Communication</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" checked="true">
+                  <span class="mdl-checkbox__label">Hardware</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Storage</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Questions</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Purple -->
 
+      </div>
+    </div>
+    <!-- /Hardware -->
+    <!-- Storage -->
+    <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="storage">
+      <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+        <div class="mdl-card__supporting-text">
+          <h4>Storage APIs</h4>
+          <p>
+            Modern web browsers support a number of ways for web sites to store data on the user's computer — with the
+            user's permission
+            — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents
+            for offline use, retain user-specific settings for your site, and more. This article explains the very
+            basics
+            of how these work.
+          </p>
+
+          <div class="mdl-tabs__tab-bar">
+            <a class="mdl-tabs__tab is-active" href="#session">Session Storage</a>
+            <a class="mdl-tabs__tab" href="#local">Local Storage</a>
+            <a class="mdl-tabs__tab" href="#exercise3">Exercise </a>
+            <a class="mdl-tabs__tab" href="#indexeddb">IndexedDB</a>
+            <a class="mdl-tabs__tab" href="#exercise4">Exercise</a>
+          </div>
         </div>
       </div>
-      <!-- /Hardware -->
-      <!-- Storage -->
-      <div class="mdl-grid demo-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="storage">
-        <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-          <div class="mdl-card__supporting-text">
-            <h4>Storage APIs</h4>
+      <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
+        <section class="mdl-tabs__panel  is-active" id="session">
+          <div class="page-content">session</div>
+        </section>
+        <section class="mdl-tabs__panel " id="local">
+          <div class="page-content">
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="storeKey">
+                <label class="mdl-textfield__label" for="storeKey">Key</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="storeValue">
+                <label class="mdl-textfield__label" for="storeValue">Value</label>
+              </div>
+              <button id="storeButton" class="mdl-button">Store</button>
+            </form>
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="retrieveKey">
+                <label class="mdl-textfield__label" for="retrieveKey">Key</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="retrieveValue">
+                <label class="mdl-textfield__label" for="retrieveValue">Value</label>
+              </div>
+              <button id="retrieveButton" class="mdl-button">Retrieve</button>
+            </form>
+          </div>
+        </section>
+
+        <!--Local Storage Exercise-->
+        <section class="mdl-tabs__panel " id="exercise3">
+
+          <div class="page-content">
+            <h3>Local Storage Exercise</h3>
             <p>
-              Modern web browsers support a number of ways for web sites to store data on the user's computer — with the user's permission
-              — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents
-              for offline use, retain user-specific settings for your site, and more. This article explains the very basics
-              of how these work.
+              Anyone remembers MySpace? We were able to change the way our profiles looked.
+              Change your profile picture and background color. Use local storage to save the image and color choice.
+              Set the saved image and background color from the local storage when you refresh your page.
             </p>
 
-            <div class="mdl-tabs__tab-bar">
-                <a class="mdl-tabs__tab is-active" href="#session">Session Storage</a>
-                <a class="mdl-tabs__tab" href="#local">Local Storage</a>
-                <a class="mdl-tabs__tab" href="#indexeddb">IndexedDB</a>
-                <a class="mdl-tabs__tab" href="#exercise3">Exercise</a>
-              </div>
-            </div>
           </div>
-          <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col mdl-layout__content">
-            <section class="mdl-tabs__panel  is-active" id="session">
-              <div class="page-content">session</div>
-            </section>
-            <section class="mdl-tabs__panel " id="local">
-              <div class="page-content">
-                  <fieldset>
-                      <legend>Store</legend>
-                      <div>
-                        <label for="storeKey">Key: </label><input id="storeKey" type="text" value = "foo" />
-                      </div>
-                      <div>
-                        <label for="storeValue">Value: </label><input id="storeValue" type="text" value = "bar" />
-                      </div>
-                      <button id="storeButton" class="mdl-button">Store</button>
-                    </fieldset>
 
-                    <fieldset>
-                      <legend>Retrieve</legend>
-                        <div>
-                          <label for="retrieveKey">Key: </label><input id="retrieveKey" type="text" value = "foo" />
-                        </div>
-                        <div>
-                          <label for="retrieveValue">Value: </label><input id="retrieveValue" type="text" />
-                        </div>
-                        <button id="retrieveButton" class="mdl-button">Retrieve</button>
-                    </fieldset>
+          <form class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <div class="mdl-textfield mdl-js-textfield">
+              <label for="bg-color">Enter your favorite color:</label>
+              <input id="bg-color" type="text" class="mdl-textfield__input" value="FF0000" required>
+              <input id="submitcolor" type="submit" class="mdl-textfield__input" value="Change Color">
+            </div>
+            <div>
+              <label for="font">Choose font style:</label>
+              <select id="font">
+                <option value="'Open Sans Condensed', sans-serif" selected>Sans-serif</option>
+                <option value="'Bitter', serif">Serif</option>
+                <option value="'Ubuntu Mono'">Monospace</option>
+              </select>
+            </div>
+            <div>
+              <label for="image">Choose image:</label>
 
-                <p id="retrieveValue"></p>
-              </div>
-            </section>
-            <section class="mdl-tabs__panel " id="indexeddb">
-              <!--TODO: change the example to a todo list, and exercise to saving images from the video stream.-->
-              <div class="page-content">
-                <p>
-                  IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
-                </p>
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
-                  id="add-indexed">
-                  <i class="material-icons" role="presentation">add</i>
-                  <span class="visuallyhidden">Add</span>
-                </button>
-                <button id="display-indexed" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">Display</button>
-                <ul id="timestamps"></ul>
-              </div>
-            </section>
-            <section class="mdl-tabs__panel " id="exercise3">
-                <div class="page-content">Exercise</div>
-              <!--TODO:write description, create an exercise.js file-->
-              <form>
-                <div class="remember">
-                  <label for="entername">Enter your name:</label>
-                  <input id="entername" type="text" required>
-                  <input id="submitname" type="submit" value="Say hello">
-                </div>
-                <div class="forget">
-                  <label for="forgetname">Want me to forget you?</label>
-                  <input id="forgetname" type="reset" value="Forget">
-                </div>
-              </form>
-              </section>
+              <select id="image">
+                <option value="images/firefoxos.png" selected>Firefox</option>
+                <option value="images/crocodile.png">Crocodile</option>
+                <option value="images/tortoise.png">Tortoise</option>
+              </select>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+              <label for="changeimage" class="mdl-textfield__label">Upload your image:</label>
+              <input id="changeimage" type="file"  name="changeimage" accept=".jpg, .jpeg, .png" class="mdl-textfield__input">
+            </div>
+          </form>
+          <div class="preview">
+            <p>No files currently selected for upload</p>
           </div>
-        <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-              <h2 class="mdl-card__title-text">Resources</h2>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Client-side Storage APIs
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage" target="_blank"
-                class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-            </div>
-          </div>
-          <div class="demo-separator mdl-cell--1-col"></div>
-          <!-- Purple -->
-          <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-              <h3>Overview</h3>
-              <ul>
-                <li>
-                  <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked="true">
-                    <span class="mdl-checkbox__label">Communication</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" checked="true">
-                    <span class="mdl-checkbox__label">Hardware</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox3" class="mdl-checkbox__input" checked="true">
-                    <span class="mdl-checkbox__label">Storage</span>
-                  </label>
-                </li>
-                <li>
-                  <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                    <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">Questions</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- / Purple -->
+        </section>
 
-        </div>
+        <section class="mdl-tabs__panel " id="indexeddb">
+          <!--TODO: change the example to a todo list, and exercise to saving images from the video stream.-->
+          <div class="page-content">
+            <p>
+              IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including
+              files/blobs. This API uses indexes to enable high-performance searches of this data.
+            </p>
+            <button
+              class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
+              id="add-indexed">
+              <i class="material-icons" role="presentation">add</i>
+              <span class="visuallyhidden">Add</span>
+            </button>
+            <button id="display-indexed"
+                    class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent">
+              Display
+            </button>
+            <ul id="timestamps"></ul>
+          </div>
+        </section>
+
+        <!--IndexDB Exercise-->
+        <section class="mdl-tabs__panel " id="exercise4">
+
+          <div class="page-content">Exercise</div>
+          <!--TODO:write description, create an exercise.js file-->
+          <form class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <div class="remember" class="mdl-textfield mdl-js-textfield">
+              <label for="entername">Enter your name:</label>
+              <input id="entername" type="text" class="mdl-textfield__input" required>
+              <input id="submitname" type="submit" class="mdl-textfield__input" value="Say hello">
+            </div>
+            <div class="forget" class="mdl-textfield mdl-js-textfield">
+              <label for="forgetname" class="mdl-textfield__label">Want me to forget you?</label>
+              <input id="forgetname" type="reset" value="Forget" class="mdl-textfield__input">
+            </div>
+          </form>
+        </section>
       </div>
-      <!-- /Storage -->
-    </main>
-    <!--/Main Panel-->
-  </div>
+      <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+        <div
+          class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+            <h2 class="mdl-card__title-text">Resources</h2>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Client-side Storage APIs
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage"
+               target="_blank"
+               class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+          </div>
+        </div>
+        <div class="demo-separator mdl-cell--1-col"></div>
+        <!-- Purple -->
+        <div
+          class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+            <h3>Overview</h3>
+            <ul>
+              <li>
+                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked="true">
+                  <span class="mdl-checkbox__label">Communication</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" checked="true">
+                  <span class="mdl-checkbox__label">Hardware</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox3" class="mdl-checkbox__input" checked="true">
+                  <span class="mdl-checkbox__label">Storage</span>
+                </label>
+              </li>
+              <li>
+                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
+                  <span class="mdl-checkbox__label">Questions</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Purple -->
 
-  <a href="https://github.com/Yonet/client-side-apis" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Github</a>
+      </div>
+    </div>
+    <!-- /Storage -->
+  </main>
+  <!--/Main Panel-->
+</div>
 
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<a href="https://github.com/Yonet/client-side-apis" target="_blank" id="view-source"
+   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Github</a>
+<script src="config.js"></script>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 <script>
   // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDKPEydiKA-BFfiJxhXTFdKyKNlQ1603KI",
-    authDomain: "glaring-fire-4545.firebaseapp.com",
-    databaseURL: "https://glaring-fire-4545.firebaseio.com",
-    projectId: "glaring-fire-4545",
-    storageBucket: "glaring-fire-4545.appspot.com",
-    messagingSenderId: "109891947647"
-  };
-  firebase.initializeApp(config);
-</script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/communication/push.js"></script>
-  <script src="scripts/communication/network.js"></script>
-   <script src="scripts/communication/bluetooth.js"></script>
-  <!-- <script src="scripts/hardware/vibrations.js"></script> -->
-  <script src="scripts/hardware/camera.js"></script>
-  <!-- <script src="scripts/hardware/proximity.js"></script> -->
-  <script src="scripts/hardware/orientation.js"></script>
-  <script src="scripts/storage/local.js"></script>
-  <script src="scripts/storage/session.js"></script>
-  <script src="scripts/storage/indexeddb.js"></script>
-  <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzeIkw_Y-VvZmBY13PxsfYiW-R0jONaVA">
-    </script>
 
-  <script defer src="scripts/hardware/geolocation.js"></script>
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzeIkw_Y-VvZmBY13PxsfYiW-R0jONaVA">
+</script>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/communication/push.js"></script>
+<script src="scripts/communication/network.js"></script>
+<script src="scripts/communication/bluetooth.js"></script>
+<script src="scripts/hardware/camera.js"></script>
+<script src="scripts/hardware/orientation.js"></script>
+<script defer src="scripts/hardware/geolocation.js"></script>
+<script src="scripts/storage/local.js"></script>
+<script src="scripts/storage/session.js"></script>
+<script src="scripts/storage/indexeddb.js"></script>
+<!--Solutions-->
+<script src="scripts/solutions/exercise-1.js"></script>
+<script src="scripts/solutions/exercise-2.js"></script>
+<script src="scripts/solutions/exercise-3.js"></script>
+<script src="scripts/solutions/exercise-4.js"></script>
 </body>
 
 </html>

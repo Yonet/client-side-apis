@@ -1,9 +1,9 @@
-var button = document.querySelector('#push-btn');
-var input = document.querySelector('#push-input');
+const pushButton = document.querySelector('#push-btn');
+var pushInput = document.querySelector('#push-input');
 
 var notify = function() {
   var options = {
-    body: input.value,
+    body: pushInput.value,
     tag: 'foo',
     type: 'basic'
   };
@@ -20,9 +20,9 @@ var notify = function() {
   };
 };
 
-button.onclick = function() {
+pushButton.onclick = function() {
   if (!('Notification' in window)) {
-    alert('This browser does not support desktop notification');
+    console.log('This browser does not support desktop notification');
   } else if (Notification.permission === 'granted') {
     notify();
   } else if (Notification.permission !== 'denied') {

@@ -1,13 +1,9 @@
-// Import stylesheets
-
-// Make functionality available when connected
-
 let ledCharacteristic = null;
 let poweredOn = false;
 
 function onConnected() {
   document.querySelector('#connect-btn').classList.add('hidden');
-  document.querySelector('#disconnect-btn').classList.remove('hidden')
+  document.querySelector('#disconnect-btn').classList.remove('hidden');
   document.querySelector('#power-btn').classList.remove('hidden');
   document.querySelector('#colors').classList.remove('hidden');
   powerOn();
@@ -16,7 +12,7 @@ function onConnected() {
 
 function onDisconnected() {
   document.querySelector('#connect-btn').classList.remove('hidden');
-  document.querySelector('#disconnect-btn').classList.add('hidden');
+  document.querySelector('#disconnect-btn').classList.add('hidden')
   document.querySelector('#power-btn').classList.add('hidden');
   document.querySelector('#colors').classList.add('hidden');
 }
@@ -25,12 +21,12 @@ function connect() {
   console.log('Connecting to the Magic Bulb');
   navigator.bluetooth.requestDevice(
     {
-      filters: [{namePrefix:"LED"}]
+      filters: [{namePrefix:"LED", optionalServices: "TSfX9T6riEzfE1U6pIfOuw=="}]
     })
     .then(device => {
       console.log('> Found ' + device.name);
       console.log('Connecting to GATT Server...');
-      device.addEventListener('gattserverdisconnected', onDisconnected)
+      device.addEventListener('gattserverdisconnected', onDisconnected);
       topDevice = device;
       return device.gatt.connect();
     })

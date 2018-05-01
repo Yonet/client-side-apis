@@ -1,8 +1,5 @@
 console.log('local');
 let storeButton = document.getElementById('storeButton').addEventListener('click', storeLocal, false);
-
-
-
 let retrieveButton = document.getElementById('retrieveButton').addEventListener('click', retrieveVal, false);
 
 function storeLocal() {

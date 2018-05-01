@@ -15,9 +15,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <link rel="stylesheet" href="styles/slides/reveal.css">
-  <link rel="stylesheet" href="styles/slides/theme/black.css" id="theme">
 
-  <!-- Theme used for syntax highlighting of code -->
+  <!--<link rel="stylesheet" href="styles/slides/theme/gdi.css" id="theme">-->
+
+  <!-- For syntax highlighting -->
+  <!--<link rel="stylesheet" href="styles/slides/theme/editor-dark.css">-->
+
+  <link rel="stylesheet" href="styles/slides/theme/league.css" id="theme">
+
+  <!--&lt;!&ndash; Theme used for syntax highlighting of code &ndash;&gt;-->
   <link rel="stylesheet" href="scripts/lib/css/zenburn.css">
 
   <!-- Printing and PDF exports -->
@@ -39,13 +45,20 @@
   <div class="slides">
     <section>
       <h1>Client-side Web APIs</h1>
-      <p>Repo: https://github.com/Yonet/client-side-apis</p>
-      <p>npm i -g gulp</p>
+      <p>Repo: <a href="https://github.com/Yonet/client-side-apis" target="_blank">https://github.com/Yonet/client-side-apis</a></p>
       <p>
         <small>Created by
-          <a href="https://twitter.com/AysSomething">Aysegul Yonet</a>
+          <a href="https://twitter.com/AysSomething" target="_blank">Ayşegül Yönet - @AysSomething</a>
         </small>
       </p>
+    </section>
+    <section>
+      <img src="images/aboutMe.png" alt="About me">
+      <footer>
+        <p>
+          <a href="./" target="_blank">Application</a>
+        </p>
+      </footer>
     </section>
 
     <section>
@@ -69,16 +82,27 @@
         developers to create complex functionality more easily.
         They abstract more complex code away from you, providing some easier syntax to use in its place.
       </p>
+      <ul>
+        <li>Browser APIs</li>
+        <li>3rd Party APIs</li>
+      </ul>
       <aside class="notes">
         Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript
         language itself, rather they are built on top of the core JavaScript language, providing you with extra
         superpowers to use in your JavaScript code. They generally fall into two categories:
-
       </aside>
     </section>
     <section>
       <h2>What are Browser APIs?</h2>
+      <ul>
+        <li>Animation</li>
+        <li>DOM</li>
+        <li>Canvas</li>
+        <li>WebGL</li>
+        <li>WebSocket</li>
+      </ul>
       <aside class="notes">
+
         Browser APIs are built into your web browser and are able to expose data from the browser and surrounding
         computer environment and do useful complex things with it. For example, the Geolocation API provides some simple
         JavaScript constructs for retrieving location data so you can say, plot your location on a Google Map.
@@ -86,10 +110,7 @@
         the device's GPS hardware (or whatever is available to determine position data), retrieve position data, and
         return it to the browser environment to use in your code.
         But again, this complexity is abstracted away from you by the API.
-        Third party APIs are not built into the browser by default, and you generally have to grab their code and
-        information from somewhere on the Web.
-        For example, the Twitter API allows you to do things like displaying your latest tweets on your website.
-        We will use a third party api to access a smart light bulb.
+
       </aside>
 
     </section>
@@ -97,7 +118,8 @@
     <section>
       <h2>What are Third party APIs?</h2>
       <ul>
-        <li>Google Maps API</li>
+        <!--TODO: add Maps API link-->
+        <li><a href=""></a>Google Maps API</li>
         <li><a href="http://www.ledmagical.com/Apps/BT001EN.html">Magic Blue Smart Light Bulb</a></li>
       </ul>
 
@@ -105,13 +127,6 @@
         href="https://www.amazon.com/Magic-Blue%C2%AE-Bluetooth-Smart-Light/dp/B01DE7KXW0/ref=cm_cr_arp_d_product_top?ie=UTF8">Smart
         Bulb</a>
       <aside class="notes">
-        Browser APIs are built into your web browser and are able to expose data from the browser and surrounding
-        computer environment and do useful complex things with it. For example, the Geolocation API provides some simple
-        JavaScript constructs for retrieving location data so you can say, plot your location on a Google Map.
-        . In the background, the browser is actually using some complex lower-level code (e.g. C++) to communicate with
-        the device's GPS hardware (or whatever is available to determine position data), retrieve position data, and
-        return it to the browser environment to use in your code.
-        But again, this complexity is abstracted away from you by the API.
         Third party APIs are not built into the browser by default, and you generally have to grab their code and
         information from somewhere on the Web.
         For example, the Twitter API allows you to do things like displaying your latest tweets on your website.
@@ -128,8 +143,12 @@
         <li>Events to handle changes in state</li>
         <li>Security mechanisms</li>
       </ul>
-      <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">JavaScript Objects</a>
-      <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Client-Side Web Events</a>
+      <footer>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">JavaScript Objects</a></p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Client-Side Web
+          Events</a></p>
+      </footer>
+
       <aside class="notes">
         Different JavaScript APIs work in slightly different ways, but generally, they have common features and similar
         themes to how they work.
@@ -142,7 +161,8 @@
         which returns the browser's Geolocation object that all the useful geolocation methods are available inside.
         Security:
         sometimes have additional security mechanisms in place.
-        For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include Service Workers and Push).
+        For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting
+        potentially sensitive data (examples include Service Workers and Push).
         Some WebAPIs request permission to be enabled.
       </aside>
 
@@ -151,22 +171,30 @@
     <section>
       <h4>Setup</h4>
       <p>
-        <small>Enable following experimental flags on chrome browser by typing 'chrome://flags' on chrome.</small>
+        <small>Enable following experimental flags on chrome browser by typing <a
+          href="chrome://flags">chrome://flags</a> on chrome.
+        </small>
       </p>
       <ul>
-        <small>
-          <li>Experimental JavaScript</li>
-          <li>Experimental Web Platform features</li>
-          <li>Developer Tools experiments</li>
-          <li>Image Capture API</li>
-        </small>
+        <li>Experimental JavaScript:
+          #enable-javascript-harmony
+        </li>
+        <li>Experimental Web Platform features:
+          #enable-experimental-web-platform-features
+        </li>
+        <li>Developer Tools experiments: #enable-javascript-harmony</li>
+        <li>Image Capture API: #enable-image-capture-api</li>
       </ul>
+      <aside class="notes">
+        chrome://flags/#enable-webvr
+
+      </aside>
     </section>
 
 
     <section>
       <h4>Network Information</h4>
-      <pre><code class="hljs" data-trim contenteditable>
+      <pre><code class="hljs xl" data-trim contenteditable>
 enum ConnectionType {
 	"bluetooth",
 	"cellular",
@@ -204,7 +232,7 @@ interface NetworkInformation : EventTarget {
 	readonly attribute Megabit                 downlink;
 	readonly attribute Millisecond             rtt;
 	readonly attribute boolean                 saveData;
-				attribute EventHandler            onchange;
+	         attribute EventHandler            onchange;
 };
 </code></pre>
       <p>The "saveData" attribute, when getting, returns true if the user has requested a reduced data usage mode from
@@ -216,8 +244,112 @@ interface NetworkInformation : EventTarget {
       <pre><code class="hljs" data-trim contenteditable>
 navigator.connection.addEventListener('change', changeHandler);
 </code></pre>
-      <a href="http://wicg.github.io/netinfo/">More info</a>
+      <footer>
+        <p>
+          <a href="./" target="_blank">Application</a>
+        </p>
+        <p>
+          <a href="http://wicg.github.io/netinfo/">More info on Network Information API</a>
+        </p>
+      </footer>
+
     </section>
+    <section>
+      <h4>Bluetooth & Bluetooth Low Energy</h4>
+      <ul>
+        <li>Heart monitors</li>
+        <li>Fitbit</li>
+        <li>Sensors</li>
+      </ul>
+      <aside class="notes">
+        Bluetooth can handle a lot of data, but consumes battery life quickly and costs a lot more.
+        BLE is used for applications that do not need to exchange large amounts of data, and can therefore run on
+        battery power for years at a cheaper cost.
+        It all depends on what you’re trying to accomplish.
+      </aside>
+    </section>
+    <section>
+      <h4>Bluetooth</h4>
+      <img src="images/enabledevmode.png" alt="Enable Developer Mode">
+    </section>
+    <section>
+      <h4>Bluetooth</h4>
+      <pre><code class="hljs" data-trim contenteditable>
+navigator.bluetooth.requestDevice(options);
+navigator.bluetooth.requestDevice({acceptAllDevices:true});
+      </code></pre>
+    </section>
+    <section>
+      <h4>Bluetooth</h4>
+      <pre><code class="hljs" data-trim contenteditable>
+navigator.bluetooth.requestDevice(options)
+   .then(device => {
+     console.log('Yay!I found your device: ' + device.name)
+   });
+    </code></pre>
+    </section>
+    <section>
+      <h4>Bluetooth</h4>
+      <pre><code class="hljs" data-trim contenteditable>
+navigator.bluetooth.requestDevice(options)
+    .then(device => {
+        device.gatt.connect())
+    };
+      </code></pre>
+      <footer>
+        <p>
+          <a href="./" target="_blank">Application</a>
+        </p>
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer">More info on GATT Server</a>
+        </p>
+      </footer>
+      <aside class="notes">Once you have the device you can use its gatt server to connect to it.
+      </aside>
+    </section>
+    <section>
+      <h4>Push API</h4>
+      <!--TODO: add note about server side push notification-->
+    </section>
+    <!--<section>-->
+      <!--<footer>-->
+        <!--<p>-->
+          <!--<a href="./" target="_blank">Application</a>-->
+        <!--</p>-->
+        <!--<p>-->
+          <!--<a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer">More info on GATT Server</a>-->
+        <!--</p>-->
+      <!--</footer>-->
+    <!--</section>-->
+    <section>
+      <h4>Hardware</h4>
+    </section>
+    <!--<section>-->
+      <!--<footer>-->
+        <!--<p>-->
+          <!--<a href="./" target="_blank">Application</a>-->
+        <!--</p>-->
+        <!--<p>-->
+          <!--<a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer">More info on GATT Server</a>-->
+        <!--</p>-->
+      <!--</footer>-->
+    <!--</section>-->
+    <section>
+      <h4>Device Orientation</h4>
+      <img src="images/screen.png" alt="screen-object">
+
+    </section>
+    <!--<section>-->
+      <!--<footer>-->
+        <!--<p>-->
+          <!--<a href="./" target="_blank">Application</a>-->
+        <!--</p>-->
+        <!--<p>-->
+          <!--<a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer">More info on GATT Server</a>-->
+        <!--</p>-->
+      <!--</footer>-->
+    <!--</section>-->
+    <!--GEO-->
     <section>
       <h4>Geolocation API</h4>
       <ul>
@@ -233,6 +365,7 @@ navigator.connection.addEventListener('change', changeHandler);
       <h4>Geolocation</h4>
 
       <ul>
+        <small>
         <li>Geolocation.getCurrentPosition(success, error?, [options]):
           <ul>
             <li>enableHighAccuracy = booleanValue</li>
@@ -242,18 +375,9 @@ navigator.connection.addEventListener('change', changeHandler);
         </li>
         <li>Geolocation.watchPosition()</li>
         <li>Geolocation.clearWatch()</li>
+        </small>
       </ul>
-      <code>
-        const options = options = {
-          enableHighAccuracy: false,
-          timeout: 5000,
-          maximumAge: 0
-        };
-        functions success(position) {//Do something with the position data};
-        function error(err) { //Handle the error};
-        const watchId = navigator.geolocation.watchPosition(success, error, options);
-        navigator.geolocation.clearWatch(watchId);
-      </code>
+
       <aside class="notes">
         PositionOptions.enableHighAccuracy:
         Is a Boolean that indicates the application would like to receive the best possible results.
@@ -276,80 +400,114 @@ navigator.connection.addEventListener('change', changeHandler);
       </aside>
     </section>
     <section>
-      <h4>Bluetooth</h4>
-      <img src="images/enabledevmode.png" alt="Enable Developer Mode">
-    </section>
-    <section>
-      <h4>Push API</h4>
-    </section>
-    <section>
-      <h4>Hardware</h4>
-    </section>
-    <section>
-      <h4>Device Orientation</h4>
-      <img src="images/screen.png" alt="screen-object">
-
-    </section>
-    <!-- <section>
-			  <h4>Device Proximity</h4>
-		  </section> -->
-    <section>
       <h4>Geolocation</h4>
+      <pre><code class="hljs" data-trim contenteditable>
+const options = {
+   enableHighAccuracy: false,
+   timeout: 5000,
+   maximumAge: 0
+};
+
+functions success(position) {<!--Do something w/ the position-->};
+function error(err) {<!--Handle the error-->};
+
+const watchId = navigator.geolocation.watchPosition(success, error, options);
+navigator.geolocation.clearWatch(watchId);
+      </code></pre>
+      <footer>
+        <p>
+          <a href="./" target="_blank">Application</a>
+        </p>
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">More info on Geolocation</a>
+        </p>
+      </footer>
     </section>
+    <!--/Geo-->
+
     <section>
       <h4>Camera</h4>
     </section>
+
+
+    <!--Data Management-->
     <section>
       <h4>Data Management APIs</h4>
       <ul>
         <li>Persistent Storage</li>
         <li>Temporary Storage</li>
       </ul>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a>
+      <footer>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser
+          storage limits and eviction criteria</a>
+
+      </footer>
+
       <aside class="notes">
-        Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example in Firefox you can choose to delete all stored data or only stored data from selected origins by going to Preferences and using the options under Privacy & Security > Cookies & Site Data.)
-        Temporary: This is data that doesn't need to persist for such long time . This will be evicted under a least recently used (LRU policy) when Storage limits are reached.
+        Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the
+        user chooses to (for example in Firefox you can choose to delete all stored data or only stored data from
+        selected origins by going to Preferences and using the options under Privacy & Security > Cookies & Site Data.)
+        Temporary: This is data that doesn't need to persist for such long time . This will be evicted under a least
+        recently used (LRU policy) when Storage limits are reached.
 
-        Storage is temporary by default; developers can choose to use persistent storage for their sites using the StorageManager.persist() method available in the Storage API.
+        Storage is temporary by default; developers can choose to use persistent storage for their sites using the
+        StorageManager.persist() method available in the Storage API.
 
-        There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively);
-        the exact limit varies depending on the browser and possibly based on user settings. See Browser storage limits and eviction criteria for more information.
+        There are limits to the amount of data you can store using client-side storage APIs (possibly both per
+        individual API and cumulatively);
+        the exact limit varies depending on the browser and possibly based on user settings. See Browser storage limits
+        and eviction criteria for more information.
 
-        consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then retrieve it when needed.
+        consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then
+        retrieve it when needed.
         This has many distinct uses, such as:
 
         Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).
-        Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).
-        Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be usable without a network connection.
+        Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session,
+        remembering if a user was previously logged in).
+        Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be
+        usable without a network connection.
         Saving web application generated documents locally for use offline
 
       </aside>
     </section>
     <section>
-      <li>Past:Cookies</li>
-      <li>Current: Web Storage and IndexedDB</li>
-      <li>Future: Cache API</li>
+      <ul>
+        <li>Past:Cookies</li>
+        <li>Current: Web Storage and IndexedDB</li>
+        <li>Future: Cache API</li>
+      </ul>
       <aside class="notes">
         Cookies:
-        The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used cookies to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
+        The concept of client-side storage has been around for a long time. Since the early days of the web, sites have
+        used cookies to store information to personalize user experience on websites. They're the earliest form of
+        client-side storage commonly used on the web.
 
-        Because of that age, there are a number of problems — both technical and user experience-wise — afflicting cookies.
-        These problems are significant enough that upon visiting a site for the first time, people living in Europe are shown messages informing them if they will use cookies to store data about them.
+        Because of that age, there are a number of problems — both technical and user experience-wise — afflicting
+        cookies.
+        These problems are significant enough that upon visiting a site for the first time, people living in Europe are
+        shown messages informing them if they will use cookies to store data about them.
         This is due to a piece of European Union legislation known as the EU Cookie directive.
 
         The only advantage cookies have is that they're supported by extremely old browsers.
 
-        Q: Why are there still new sites being created using cookies? This is mostly because of developers' habits, use of older libraries that still use cookies, and the existence of many web sites providing out-of-date reference and training materials to learn how to store data.
+        Q: Why are there still new sites being created using cookies? This is mostly because of developers' habits, use
+        of older libraries that still use cookies, and the existence of many web sites providing out-of-date reference
+        and training materials to learn how to store data.
         WebStorage:
         he Web Storage API provides a very simple syntax for storing and retrieving smaller,
-        data items consisting of a name and a corresponding value. This is useful when you just need to store some simple data,
+        data items consisting of a name and a corresponding value. This is useful when you just need to store some
+        simple data,
         like the user's name, whether they are logged in, what color to use for the background of the screen, etc.
 
         IndexedDB API: provides the browser with a complete database system for storing complex data.
-        This can be used for things from complete sets of customer records to even complex data types like audio or video files.
+        This can be used for things from complete sets of customer records to even complex data types like audio or
+        video files.
 
         Cache API is designed for storing HTTP responses to specific requests,
-        and is very useful for doing things like storing website assets offline so the site can subsequently be used without a network connection.
+        and is very useful for doing things like storing website assets offline so the site can subsequently be used
+        without a network connection.
         Cache is usually used in combination with the Service Worker API, although it doesn't have to be.
 
       </aside>
@@ -380,26 +538,25 @@ navigator.connection.addEventListener('change', changeHandler);
         <li>Session Storage</li>
         <li>Local Storage</li>
       </ul>
-      <code>
+      <pre><code class="hljs" data-trim contenteditable>
         localStorage.setItem('name','Aysegul');
         var myName = localStorage.getItem('name');
         localStorage.removeItem('name');
-      </code>
-      <p>
+      </code></pre>
+      <footer>
         Open Chrome Dev Tools > Application > Storage > Local Storage
-      </p>
+      </footer>
       <aside class="notes">
         There is a separate data store for each domain (each separate web address loaded in the browser).
-        You will see that if you load two websites (say google.com and amazon.com) and try storing an item on one website,
+        You will see that if you load two websites (say google.com and amazon.com) and try storing an item on one
+        website,
         it won't be available to the other website.
         TODO: Exercise: personalized page. Forget me button!
       </aside>
     </section>
     <section>
       <h4>Session Storage</h4>
-      <ul>
-        <li>Cleared when the user session is over</li>
-      </ul>
+      <p>Cleared when the user session is over</p>
       <pre><code class="hljs" data-trim contenteditable>
 // Save data to sessionStorage
 sessionStorage.setItem('key', 'value');
@@ -423,6 +580,14 @@ sessionStorage.clear();
           supports prototyping.
         </li>
       </ul>
+      <footer>
+        <p>
+          <a href="./" target="_blank">Application</a>
+        </p>
+        <!--<p>-->
+          <!--<a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">More info on Geolocation</a>-->
+        <!--</p>-->
+      </footer>
     </section>
     <section>
       <h4>IndexedDB</h4>
@@ -451,8 +616,17 @@ sessionStorage.clear();
         <li>JsStore: An IndexedDB wrapper with SQL like syntax.
         </li>
       </ul>
-      <!--https://developer.mozilla.org/en-US/docs/Web/API/IDBEnvironment-->
+      <footer>
+        <p>
+          <a href="./" target="_blank">Application</a>
+        </p>
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBEnvironment">More info on IndexedDB</a>
+        </p>
+      </footer>
     </section>
+    <!--/Data Management-->
+
     <section>
       <h2>Resources</h2>
       <ul>
