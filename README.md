@@ -4,8 +4,8 @@
 
 Exercecises and slides for FrontEndMasters Client-side APIs workshop. 
 
-(App)[https://yonet.github.io/client-side-apis/app/]
-(Slides)[https://yonet.github.io/client-side-apis/app/slides.html]
+[App](https://yonet.github.io/client-side-apis/app/)
+[Slides](https://yonet.github.io/client-side-apis/app/slides.html)
 
 ### Features
 
